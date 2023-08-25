@@ -1,23 +1,27 @@
-# TÍTULO DO PROJETO
+# SMART MONEY
 
-`CURSO`
+`ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
-`DISCIPLINA`
+`Projeto: Desenvolvimento de uma Aplicação Interativa`
 
-`SEMESTRE`
+`Eixo 2 - 2023`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+<img src="https://i.imgur.com/5JkQgyt.png" style="width: 200px;" alt="Logo SmartMoney">
+
+O projeto consiste em desenvolver umsistema de gestão de renda e despesas, destinado a auxiliar os usuários no eficiente controle de suas finanças pessoais. Através dessa plataforma, os usuários poderão registrar suas fontes de renda e registrar despesas, promovendo um consumo consciente e equilibrado em termos financeiros.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Bruno da Silva Lobo
+* Grazielly Pereira de Oliveira
+* Lorena Lopes Pimenta
+* Lucas Lousada Batalha dos Santos
+* Lucas Marques Gomes Viana Lima
+* Maria Beatriz da Silva
 
 ## Orientador
 
-* Nome completo do professor 1
+* Bernardo Jeunon de Alencar
 
 ## Instruções de utilização
 
