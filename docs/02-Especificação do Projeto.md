@@ -1,6 +1,7 @@
 # Especificações do Projeto
 
 <span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
+
 Para a especificação do projeto, foram determinadas as personas e suas histórias de usuários. Além disso, foram especificados os requisitos funcionais, não funcionais, restrições do projeto e o diagrama de casos de uso.
 
 ## Personas
@@ -81,4 +82,4 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 ## Diagrama de Casos de Uso
 
-<img src="https://i.imgur.com/bGIQZb4.png" style="width: 80%;" alt="Logo SmartMoney">
+<img src="https://i.imgur.com/bGIQZb4.png" style="width: 70%;" alt="Logo SmartMoney">
