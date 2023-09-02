@@ -6,9 +6,9 @@
 
 `Eixo 2 - 2023`
 
-<img src="https://i.imgur.com/5JkQgyt.png" style="width: 200px;" alt="Logo SmartMoney">
+<img src="https://i.imgur.com/j4IaAuD.png" style="width: 300px;" alt="Logo SmartMoney">
 
-O projeto consiste em desenvolver umsistema de gestão de renda e despesas, destinado a auxiliar os usuários no eficiente controle de suas finanças pessoais. Através dessa plataforma, os usuários poderão registrar suas fontes de renda e registrar despesas, promovendo um consumo consciente e equilibrado em termos financeiros.
+O projeto consiste em desenvolver um sistema de gestão de renda e despesas, destinado a auxiliar os usuários no eficiente controle de suas finanças pessoais. Através dessa plataforma, os usuários poderão registrar suas fontes de renda e registrar despesas, promovendo um consumo consciente e equilibrado em termos financeiros.
 
 ## Integrantes
 
