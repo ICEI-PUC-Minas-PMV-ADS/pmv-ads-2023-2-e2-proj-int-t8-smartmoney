@@ -27,8 +27,8 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
 |Usuário do sistema  | Registrar minhas despesas e ter uma previsão de quando poderei fazer minhas viagens | Ter um futuro confortável e conquistar liberdade geográfica |
-|Usuário do sistema  | Registrar minhas metas e orçamentos financeiros | Ser independente financeiramente |
-|Usuário do sistema  | Gerenciar e visualizar minhas principais categorias de gastos | Ter estabilidade financeira |
+|Usuário do sistema  | Registrar minhas metas financeiras | Ser independente financeiramente |
+|Usuário do sistema  | Gerenciar minhas principais categorias de gastos | Ter estabilidade financeira |
 |Usuário do sistema  | Acompanhar o fluxo entre receitas e despesas, além de verificar meus gastos em um mês específico | Obter reeducação financeira e conquistar uma casa própria |
 
 ## Requisitos
