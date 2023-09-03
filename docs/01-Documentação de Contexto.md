@@ -1,46 +1,31 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Conforme observado por <a href="https://periodicos.set.edu.br/cadernohumanas/article/view/7683/4429">Emilso Costa et al. (2021)</a>, a elaboração de um planejamento financeiro possibilita que indivíduos desenvolvam estratégias eficazes para liquidar dívidas, estabelecer metas de consumo realistas, planejar aquisições a curto, médio e longo prazo, bem como realizar investimentos lucrativos.
+
+Ademais, a gestão eficaz de finanças pessoais é essencial para a estabilidade econômica, planejamento de metas e educação financeira. Em um mundo cada vez mais complexo, a capacidade de controlar e entender as despesas tornou-se uma habilidade fundamental. 
+
+Nesse contexto, uma plataforma que auxilia na gestão financeira surge como uma solução prática e estratégica para ajudar as pessoas a gerenciar suas finanças de maneira simples e eficaz.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
-
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Segundo uma pesquisa realizada pela Leve, fintech de educação brasileira, mais de 52% dos brasileiros não conseguem se planejar financeiramente para o futuro (<a href="https://einvestidor.estadao.com.br/educacao-financeira/brasileiros-planejamento-financeiro-pesquisa/">leia</a>). Sabemos que para garantir um futuro financeiramente confortável, se faz necessário uma boa gestão de patrimônio desde cedo, e por conta disso, se faz necessário a criação de um sistema que possibilita fazer a gestão de renda e registro de despesas, garantindo gastos mais conscientes.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O objetivo principal desta plataforma é criar um sistema que permita que os usuários registrem e categorizem suas despesas de maneira fácil e rápida. Com ela, o usuário deve ser capaz de:
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+- Classificar as despesas em categorias, como alimentação, transporte, moradia e entretenimento.
+- Comparar as receitas com as despesas. Dessa forma, o usuário terá uma visão clara da diferença entre ganhos e gastos.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+No atual cenário em que os brasileiros não possuem um planejamento financeiro sólido ([leia](https://einvestidor.estadao.com.br/educacao-financeira/brasileiros-planejamento-financeiro-pesquisa/)) e enfrentam dificuldades relacionadas ao endividamento devido à falta de educação financeira, a criação de uma interface que possibilita a gestão financeira pessoal se torna uma necessidade.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+A iniciativa tem por objetivo possibilitar que os usuários possam gerir sua renda, controlar e registrar suas despesas, garantindo uma mudança positiva nos hábitos de consumo, conscientizar as pessoas sobre educação financeira e por consequência, as pessoas terão suas dívidas cada vez menores, garantindo um futuro melhor.
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+O público alvo são pessoas entre 21 a 45 anos que se sentem prejudicadas financeiramente por não terem uma gestão financeira pessoal e queiram mudar esse cenário, independente de seu objetivo.
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+Também será útil para pessoas que querem apenas fazer a gestão financeira de seu patrimônio, independente de qualquer objetivo.
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Outrossim, será útil para pessoas que possuem dívidas e queiram fazer o controle de despesas para prever um cenário de quitação.
