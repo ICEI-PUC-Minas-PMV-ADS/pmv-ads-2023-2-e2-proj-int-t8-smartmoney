@@ -64,4 +64,4 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Diagrama de Casos de Uso
 
-<img src="https://i.imgur.com/kXz3amI.png style="width: 70%;" alt="Diagrama de casos de uso">
+<img src="https://i.imgur.com/aiG8Pih.png" style="width: 70%;" alt="Diagrama de casos de uso">
