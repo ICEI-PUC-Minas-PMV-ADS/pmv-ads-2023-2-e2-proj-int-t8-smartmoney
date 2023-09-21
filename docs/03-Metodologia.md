@@ -95,7 +95,7 @@ A equipe está organizada da seguinte maneira:
 
 ### Processo
 
-Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Trello estruturado com as seguintes listas: 
+Para organização e distribuição das tarefas do projeto, a equipe está utilizando o GitHub projects estruturado com as seguintes listas: 
  
 <!-- > **Links Úteis**:
 > - [Project management, made simple](https://github.com/features/project-management/)
@@ -104,13 +104,16 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 > - [Tutorial Slack](https://slack.com/intl/en-br/) -->
 
 <ul>
- <li><strong>Backlog: </strong>recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista.</li>
- <li><strong>To Do: </strong>esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando.</li>
- <li><strong>Doing: </strong>quando uma tarefa tiver sido iniciada, ela é movida para cá.</li>
- <li><strong>Done: </strong>nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para serem entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.</li>
+ <li><strong> Product Backlog: </strong> Todos os artefatos que serão necessários para o desenvolvimento completo do projeto,devem ser incorporadas a esta lista.</li>
+ <li><strong>To Do: </strong> Todos os artefatos referentes à etapa atual do desenvolvimento do projeto.</li>
+ <li><strong>In Progress: </strong> Quando uma tarefa tiver sido iniciada,e sendo desenvolvida ela é movida para cá.</li> 
+<li><strong>Teste: </strong> Nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e aguardando aprovação para implementação.
+<li><strong>Done: </strong> Nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para serem entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.</li>
 </ul>
 
-O quadro Kanban do grupo desenvolvido na ferramenta de gerenciamento de projetos está disponível em Github Projects <a href="  https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/495   " target="_blank">clicando aqui</a>.   https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/495
+O quadro Kanban do grupo desenvolvido na ferramenta de gerenciamento de projetos está disponível em Github Projects:  https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/495". 
+
+![Captura de tela 2023-09-21 180217](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/0b15a134-b0b4-4f16-8aed-63a7ba3f028b)
 
 
 ### Ferramentas
