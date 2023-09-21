@@ -110,7 +110,7 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
  <li><strong>Done: </strong>nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para serem entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.</li>
 </ul>
 
-O quadro Kanban do grupo desenvolvido na ferramenta de gerenciamento de projetos está disponível <a href="LINK AQUI" target="_blank">clicando aqui</a>.
+O quadro Kanban do grupo desenvolvido na ferramenta de gerenciamento de projetos está disponível em Github Projects <a href="https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/495/views/1" target="_blank">clicando aqui</a>.
 
 
 ### Ferramentas
