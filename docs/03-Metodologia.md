@@ -1,4 +1,3 @@
-
 # Metodologia
 
 A metodologia contempla as definições de ferramental utilizado pela equipe tanto para a manutenção dos códigos e demais artefatos quanto para a organização do time na execução das tarefas do projeto.
@@ -19,20 +18,19 @@ A metodologia contempla as definições de ferramental utilizado pela equipe tan
   <tr>
     <td style="border: 1px solid black; padding: 10px;">Documentos do projeto</td>
     <td style="border: 1px solid black; padding: 10px;">GitHub</td>
-    <td style="border: 1px solid black; padding: 10px;"><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2023-1-E1-PROJ-WEB-T11-Time2-CONCRETIZE.git" target="_blank">Clique aqui</a> para acessar a documentação no Drive</td>
+    <td style="border: 1px solid black; padding: 10px;"><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney.git" target="_blank">Clique aqui</a> para acessar a documentação no Drive</td>
   </tr>
   <tr>
     <td style="border: 1px solid black; padding: 10px;">Projeto de Interface e  Wireframes</td>
     <td style="border: 1px solid black; padding: 10px;">Figma</td>
-    <td style="border: 1px solid black; padding: 10px;"><a href="https://www.figma.com/file/2zdYm4H8njZOzXqB49R3yF/Prot%C3%B3tipos-de-m%C3%A9dia-fidelidade?type=design&node-id=0%3A1&t=fkO5sdfPg0995Ssj-1" target="_blank">Clique aqui</a> para acessar os Wireframes do projeto</td>
+    <td style="border: 1px solid black; padding: 10px;"><a href="https://www.figma.com/file/i82jdwAs6KlARlZxxf8Nj8/SmartMoney?type=design&node-id=48-663&mode=design&t=RqR6xTCyZJKhbWbx-0" target="_blank">Clique aqui</a> para acessar os Wireframes do projeto</td>
   </tr>
   <tr>
     <td style="border: 1px solid black; padding: 10px;">Gerenciamento do Projeto</td>
     <td style="border: 1px solid black; padding: 10px;">GitHub</td>
-    <td style="border: 1px solid black; padding: 10px;"><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2023-1-E1-PROJ-WEB-T11-Time2-CONCRETIZE.git" target="_blank">Clique aqui</a> para acessar nosso gerenciador do Projeto</td>
+    <td style="border: 1px solid black; padding: 10px;"><a href="https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/495/views/1" target="_blank">Clique aqui</a> para acessar nosso gerenciador do Projeto</td>
   </tr>
 </table>
-
 
 <!-- ## Controle de Versão
 
@@ -71,22 +69,24 @@ A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para def
 ### Divisão de Papéis
 
 A equipe está organizada da seguinte maneira:
-<!--
+
 <ul>
  <li>Scrum Master: Bruno Lobo</li>
- <li>Product Owner: Kleiton Soares</li>
+ <li>Product Owner: Lucas Marques</li>
  <li>Equipe de Desenvolvimento:</li>
   <ul>
    <li>Bruno Lobo</li>
-   <li>Kleiton Soares</li>
+   <li>Lorena Lopes</li>
+   <li>Grazielly Pereira</li>
    <li>Lucas Marques</li>
+   <li>Lucas Lousada</li>
    <li>Maria Beatriz</li>
   </ul>
  <li>Equipe de Design:</li>
   <ul>
    <li>Maria Beatriz</li>
   </ul>
-</ul> -->
+</ul>
 
 <!-- > **Links Úteis**:
 > - [11 Passos Essenciais para Implantar Scrum no seu 
@@ -95,7 +95,7 @@ A equipe está organizada da seguinte maneira:
 
 ### Processo
 
-Para organização e distribuição das tarefas do projeto, a equipe está utilizando o GitHub projects estruturado com as seguintes listas: 
+Para organização e distribuição das tarefas do projeto, a equipe está utilizando o GitHub Project estruturado com as seguintes listas: 
  
 <!-- > **Links Úteis**:
 > - [Project management, made simple](https://github.com/features/project-management/)
@@ -104,17 +104,16 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 > - [Tutorial Slack](https://slack.com/intl/en-br/) -->
 
 <ul>
- <li><strong> Product Backlog: </strong> Todos os artefatos que serão necessários para o desenvolvimento completo do projeto,devem ser incorporadas a esta lista.</li>
- <li><strong>To Do: </strong> Todos os artefatos referentes à etapa atual do desenvolvimento do projeto.</li>
- <li><strong>In Progress: </strong> Quando uma tarefa tiver sido iniciada,e sendo desenvolvida ela é movida para cá.</li> 
-<li><strong>Teste: </strong> Nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e aguardando aprovação para implementação.
-<li><strong>Done: </strong> Nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para serem entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.</li>
+ <li><strong>Product backlog: </strong>todos os artefatos que serão necessários para o desenvolvimento completo do projeto.</li>
+ <li><strong>To do: </strong>todos os artefatos referentes à etapa atual do desenvolvimento do projeto..</li>
+ <li><strong>In progress: </strong>artefatos que estão sendo desenvolvidos no momento.</li>
+ <li><strong>Test: </strong>artefatos aguardando aprovação para implementação.</li>
+ <li><strong>Done: </strong>todos os artefatos que foram testados, aprovados e implementados no projeto.</li>
 </ul>
 
-O quadro Kanban do grupo desenvolvido na ferramenta de gerenciamento de projetos está disponível em Github Projects:  https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/495". 
+O quadro Kanban do grupo desenvolvido na ferramenta de gerenciamento de projetos está disponível <a href="https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/495" target="_blank">clicando aqui</a>.
 
 ![Captura de tela 2023-09-21 180217](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/0b15a134-b0b4-4f16-8aed-63a7ba3f028b)
-
 
 ### Ferramentas
 
