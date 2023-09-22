@@ -1,15 +1,10 @@
-
 # Projeto de Interface
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
-
-Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
-
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
+Estamos dando foco a diversas questões durante a criação da interface do sistema, incluindo agilidade, acessibilidade e usabilidade. Esses aspectos estão sendo cuidadosamente considerados para garantir que o projeto tenha uma identidade visual consistente em todas as telas, tanto para desktops quanto para dispositivos móveis.
 
 ## Diagrama de Fluxo
 
-O Diagrama de Fluxo apresenta um modelo que ilustra como o usuário pode navegar pelo sistema por meio das telas, seguindo o planejamento da aplicação interativa, em conformidade com os requisitos funcionais, não funcionais, restrições e histórias das personas.
+O Diagrama de Fluxo apresenta um modelo que ilustra como o usuário pode navegar pelo sistema por meio das telas, seguindo o planejamento da aplicação, em conformidade com os requisitos funcionais, não funcionais, restrições e histórias das personas.
 
 | ![Figura 1 - Primeira parte do fluxo do usuário](./img/fluxo-do-usuario-1.png "Figura 1") |
 | :---------------------------------------------------------------------------------------: |
