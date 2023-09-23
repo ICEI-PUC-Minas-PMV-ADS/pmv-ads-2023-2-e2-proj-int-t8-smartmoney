@@ -15,16 +15,81 @@ O Diagrama de Fluxo apresenta um modelo que ilustra como o usuário pode navegar
 |                      *Figura 2 - Última parte do fluxo do usuário*                      |
 
 ## Wireframes
+Para visualizar as telas pelo figma, <a href="https://www.figma.com/proto/i82jdwAs6KlARlZxxf8Nj8/SmartMoney?type=design&node-id=1-521&t=Xo38WHN7p66vuQZA-0&scaling=scale-down-width&page-id=0%3A1">clique aqui</a>. Ao acessar o link, basta passar para o lado para visualizar todas as telas.
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+<table style="border-collapse: collapse;">
+   <tr>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/wireframes/0-cadastro.png" alt="" style="max-width: 100%; height: auto;">
+      <p>1 - Página de cadastro.</p>
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/wireframes/1-login.png" alt="" style="max-width: 100%; height: auto;">
+      <p>2 - Página de login.</p>
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/wireframes/2-recuperar-senha.png" alt="" style="max-width: 100%; height: auto;">
+      <p>3 - Página de recuperação de senha.</p>
+    </td>
+  </tr>
+</table>
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+| ![4 - Dashboard](./img/wireframes/3-dash-inicial.png) |       
+| :-------------------------------------------------------------: |  
+|                      4 - Página de dashboard (home)           |
+
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/wireframes/4-transacoes.png" alt="" style="max-width: 100%; height: auto;">
+      <p>5 - Página de transações. Nessa tela o usuário poderá visualizar, filtrar, criar, editar e excluir transações.</p>
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/wireframes/5-transacoes.png" alt="" style="max-width: 100%; height: auto;">
+     <p>6 - Modal aberta quando o usuário clica no botão "+ nova transação".</p>
+    </td>
+  </tr>
+</table>
+
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/wireframes/6-categorias.png" alt="" style="max-width: 100%; height: auto;">
+      <p>7 - Página de categorias. Nessa tela o usuário poderá visualizar, criar, editar e excluir categorias.</p>
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/wireframes/7-categorias-adicionar.png" alt="" style="max-width: 100%; height: auto;">
+     <p>8 - Modal aberta quando o usuário clica no botão "+ nova categoria".</p>
+    </td>
+  </tr>
+</table>
+
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/wireframes/8-metas.png" alt="" style="max-width: 100%; height: auto;">
+      <p>9 - Página de metas. Nessa tela o usuário poderá visualizar, criar, editar e excluir metas.</p>
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/wireframes/9-metas-adicionar.png" alt="" style="max-width: 100%; height: auto;">
+     <p>10 - Esta modal é aberta quando o usuário clica no botão "+ nova meta".</p>
+    </td>
+  </tr>
+</table>
+
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/wireframes/10-carteira.png" alt="" style="max-width: 100%; height: auto;">
+      <p>11 - Página de carteiras. Nessa tela o usuário poderá visualizar, criar e excluir carteiras.</p>
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/wireframes/11-carteira-adicionar.png" alt="" style="max-width: 100%; height: auto;">
+     <p>12 - Modal aberta quando o usuário clica no botão "+ nova carteira".</p>
+    </td>
+  </tr>
+</table>
+
+| ![13 - Perfil](./img/wireframes/12-perfil.png) |       
+| :-------------------------------------------------------------: |  
+|                      13 - Página de perfil. Nessa tela o usuário poderá editar seu perfil, atualizar sua senha e excluir sua conta.           |
