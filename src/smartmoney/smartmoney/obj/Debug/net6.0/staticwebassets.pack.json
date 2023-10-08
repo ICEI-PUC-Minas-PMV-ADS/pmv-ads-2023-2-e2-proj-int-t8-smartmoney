@@ -129,32 +129,8 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\mariabeatriz\\workspace\\pmv-ads-2023-2-e2-proj-int-t8-smartmoney\\src\\smartmoney\\smartmoney\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
-    },
-    {
       "Id": "C:\\Users\\mariabeatriz\\workspace\\pmv-ads-2023-2-e2-proj-int-t8-smartmoney\\src\\smartmoney\\smartmoney\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
-    },
-    {
-      "Id": "C:\\Users\\mariabeatriz\\workspace\\pmv-ads-2023-2-e2-proj-int-t8-smartmoney\\src\\smartmoney\\smartmoney\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
-    },
-    {
-      "Id": "C:\\Users\\mariabeatriz\\workspace\\pmv-ads-2023-2-e2-proj-int-t8-smartmoney\\src\\smartmoney\\smartmoney\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
-    },
-    {
-      "Id": "C:\\Users\\mariabeatriz\\workspace\\pmv-ads-2023-2-e2-proj-int-t8-smartmoney\\src\\smartmoney\\smartmoney\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
-    },
-    {
-      "Id": "C:\\Users\\mariabeatriz\\workspace\\pmv-ads-2023-2-e2-proj-int-t8-smartmoney\\src\\smartmoney\\smartmoney\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
-    },
-    {
-      "Id": "C:\\Users\\mariabeatriz\\workspace\\pmv-ads-2023-2-e2-proj-int-t8-smartmoney\\src\\smartmoney\\smartmoney\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
       "Id": "C:\\Users\\mariabeatriz\\workspace\\pmv-ads-2023-2-e2-proj-int-t8-smartmoney\\src\\smartmoney\\smartmoney\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
@@ -363,14 +339,6 @@
     {
       "Id": "C:\\Users\\mariabeatriz\\workspace\\pmv-ads-2023-2-e2-proj-int-t8-smartmoney\\src\\smartmoney\\smartmoney\\wwwroot\\lib\\bootstrap\\dist\\scss\\bootstrap-utilities.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\scss\\bootstrap-utilities.scss"
-    },
-    {
-      "Id": "C:\\Users\\mariabeatriz\\workspace\\pmv-ads-2023-2-e2-proj-int-t8-smartmoney\\src\\smartmoney\\smartmoney\\wwwroot\\lib\\bootstrap\\dist\\scss\\bootstrap.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\scss\\bootstrap.css"
-    },
-    {
-      "Id": "C:\\Users\\mariabeatriz\\workspace\\pmv-ads-2023-2-e2-proj-int-t8-smartmoney\\src\\smartmoney\\smartmoney\\wwwroot\\lib\\bootstrap\\dist\\scss\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\scss\\bootstrap.min.css"
     },
     {
       "Id": "C:\\Users\\mariabeatriz\\workspace\\pmv-ads-2023-2-e2-proj-int-t8-smartmoney\\src\\smartmoney\\smartmoney\\wwwroot\\lib\\bootstrap\\dist\\scss\\bootstrap.scss",
