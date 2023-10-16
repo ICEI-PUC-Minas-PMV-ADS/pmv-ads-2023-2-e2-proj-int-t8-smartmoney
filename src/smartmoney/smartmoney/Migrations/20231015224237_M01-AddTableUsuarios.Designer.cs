@@ -11,14 +11,14 @@ using smartmoney.Models;
 namespace smartmoney.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231008232151_M01-AddTableUsuarios")]
+    [Migration("20231015224237_M01-AddTableUsuarios")]
     partial class M01AddTableUsuarios
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.22")
+                .HasAnnotation("ProductVersion", "6.0.23")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
