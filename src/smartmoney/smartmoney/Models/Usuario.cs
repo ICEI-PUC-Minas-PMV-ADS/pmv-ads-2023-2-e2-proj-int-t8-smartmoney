@@ -19,5 +19,11 @@ namespace smartmoney.Models
         [Required(ErrorMessage = "Obrigatório informar a senha.")]
         [DataType(DataType.Password)]
         public string Senha { get; set; }
+
+        public ICollection<Carteira> Carteiras { get; set; }
+        public ICollection<Categoria> Categorias { get; set; }
+        public ICollection<Meta> Metas { get; set; }
+
+
     }
 }
