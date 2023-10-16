@@ -9,13 +9,14 @@ namespace smartmoney.Models
         [Key]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "obrigatório Informar o nome.")]
+        [Required(ErrorMessage = "Obrigatório informar o nome.")]
         public string Nome { get; set; }
 
-        [Required(ErrorMessage = "obrigatório Informar o email.")]
+        [Required(ErrorMessage = "Obrigatório informar o email.")]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "obrigatório Informar a senha.")]
+        [Required(ErrorMessage = "Obrigatório informar a senha.")]
         [DataType(DataType.Password)]
         public string Senha { get; set; }
     }
