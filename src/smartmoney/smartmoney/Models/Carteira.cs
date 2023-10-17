@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace smartmoney.Models
@@ -11,12 +12,16 @@ namespace smartmoney.Models
 
         [Required(ErrorMessage = "Obrigatório informar o título.")]
         public string Titulo { get; set; }
-       
-        public decimal Saldo { get; set; }
+
+        [DefaultValue(0)]
+        public decimal? Saldo { get; set; }
 
         public int UsuarioId { get; set; }
 
         [ForeignKey("UsuarioId")]
-        public Usuario Usuario { get; set;}
+        public Usuario? Usuario { get; set;}
+
+        public ICollection<Transacao>? Transacoes { get; set; }
+
     }
 }
