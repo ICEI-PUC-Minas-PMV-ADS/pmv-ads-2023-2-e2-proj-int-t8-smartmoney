@@ -2,37 +2,33 @@
 
 @{
     Layout = "~/Views/Shared/_LayoutUsuarios.cshtml";
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Cadastre-se";
 }
 
-<div class="col-6">
-    <h1>Cadastrar usuário</h1>
+<div class="col-11 col-md-5 p-0 py-3 mx-auto my-md-auto">
     <div class="row">
-        <a class="nav-link text-dark fs-5 col-6" asp-area="" asp-controller="Usuarios" asp-action="Login">Login</a>
-        <a class="nav-link text-dark fs-5 col-6" asp-area="" asp-controller="Usuarios" asp-action="Create">Cadastrar</a>
+        <a class="col-6 fw-bold text-dark text-decoration-none text-center link-active fs-5" asp-area="" asp-controller="Usuarios" asp-action="Create">Cadastro</a>
+        <a class="col-6 fw-bold text-dark text-decoration-none text-center link-inactive fs-5" asp-area="" asp-controller="Usuarios" asp-action="Login">Login</a>
     </div>
-    <form asp-action="Create">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="form-group">
-            <label asp-for="Nome" class="control-label"></label>
-            <input asp-for="Nome" class="form-control" />
-            <span asp-validation-for="Nome" class="text-danger"></span>
+    <form asp-action="Create" class="pt-lg-2">
+        <div asp-validation-summary="ModelOnly" class="form-text text-danger"></div>
+        <div class="form-group my-3 my-lg-4">
+            <input asp-for="Nome" class="w-100 py-1 py-lg-2 fs-6" placeholder="Nome" />
+            <span asp-validation-for="Nome" class="form-text text-danger"></span>
         </div>
-        <div class="form-group">
-            <label asp-for="Email" class="control-label"></label>
-            <input asp-for="Email" class="form-control" />
-            <span asp-validation-for="Email" class="text-danger"></span>
+        <div class="form-group my-3 my-lg-4">
+            <input asp-for="Email" class="w-100 py-1 py-lg-2 fs-6" placeholder="Email" />
+            <span asp-validation-for="Email" class="form-text text-danger"></span>
         </div>
-        <div class="form-group">
-            <label asp-for="Senha" class="control-label"></label>
-            <input asp-for="Senha" class="form-control" />
-            <span asp-validation-for="Senha" class="text-danger"></span>
+        <div class="form-group my-3 my-lg-4">
+            <input asp-for="Senha" class="w-100 py-1 py-lg-2 fs-6" placeholder="Senha" />
+            <span asp-validation-for="Senha" class="form-text text-danger"></span>
         </div>
-        <div class="form-group">
-            <input type="submit" value="Create" class="btn btn-primary" />
+        <div class="form-group my-3 my-lg-4">
+            <input type="submit" value="Cadastrar" class="w-100 fw-medium py-lg-2 btn btn-primary text-light" />
         </div>
     </form>
-    <p class="text-danger">@ViewBag.Message</p>
+    <p class="form-text text-danger text-center">@ViewBag.Message</p>
 </div>
 
 @section Scripts {

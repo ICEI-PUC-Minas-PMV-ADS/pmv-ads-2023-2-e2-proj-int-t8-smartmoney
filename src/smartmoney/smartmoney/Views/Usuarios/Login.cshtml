@@ -2,7 +2,7 @@
 
 @{
     Layout = "~/Views/Shared/_LayoutUsuarios.cshtml";
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Entre ou cadastre-se";
 }
 
 <div class="col-11 col-md-5 p-0 py-3 mx-auto my-md-auto">
@@ -11,7 +11,7 @@
         <a class="col-6 fw-bold text-dark text-decoration-none text-center link-active fs-5" asp-area="" asp-controller="Usuarios" asp-action="Login">Login</a>
     </div>
     <form asp-action="Login" class="pt-lg-2">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div asp-validation-summary="ModelOnly" class="form-text text-danger"></div>
         <div class="form-group my-3 my-lg-4">
             <input asp-for="Email" class="w-100 py-1 py-lg-2 fs-6" placeholder="Email" />
             <span asp-validation-for="Email" class="form-text text-danger"></span>
@@ -23,8 +23,8 @@
         <div class="form-group my-3 my-lg-4">
             <input type="submit" value="Entrar" class="w-100 fw-medium py-lg-2 btn btn-primary text-light" />
         </div>
-        <p class="form-text text-danger text-center">@ViewBag.Message</p>
     </form>
+    <p class="form-text text-danger text-center">@ViewBag.Message</p>
     <a class="d-block w-100 text-center text-secondary pt-lg-2" asp-area="" asp-controller="Usuarios" asp-action="">Esqueceu a senha?</a>
 </div>
 
