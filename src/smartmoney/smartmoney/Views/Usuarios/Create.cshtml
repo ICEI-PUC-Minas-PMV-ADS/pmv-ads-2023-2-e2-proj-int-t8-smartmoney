@@ -11,7 +11,7 @@
         <a class="nav-link text-dark fs-5 col-6" asp-area="" asp-controller="Usuarios" asp-action="Login">Login</a>
         <a class="nav-link text-dark fs-5 col-6" asp-area="" asp-controller="Usuarios" asp-action="Create">Cadastrar</a>
     </div>
-    <form asp-action="Create">
+    <form method="post" asp-action="Create">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="form-group">
             <label asp-for="Nome" class="control-label"></label>

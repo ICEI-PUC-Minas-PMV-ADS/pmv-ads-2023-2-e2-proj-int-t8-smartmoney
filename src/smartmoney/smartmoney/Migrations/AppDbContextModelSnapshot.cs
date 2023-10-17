@@ -201,7 +201,7 @@ namespace smartmoney.Migrations
             modelBuilder.Entity("smartmoney.Models.Transacao", b =>
                 {
                     b.HasOne("smartmoney.Models.Carteira", "Carteira")
-                        .WithMany()
+                        .WithMany("Transacoes")
                         .HasForeignKey("CarteiraId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -215,6 +215,11 @@ namespace smartmoney.Migrations
                     b.Navigation("Carteira");
 
                     b.Navigation("Categoria");
+                });
+
+            modelBuilder.Entity("smartmoney.Models.Carteira", b =>
+                {
+                    b.Navigation("Transacoes");
                 });
 
             modelBuilder.Entity("smartmoney.Models.Usuario", b =>

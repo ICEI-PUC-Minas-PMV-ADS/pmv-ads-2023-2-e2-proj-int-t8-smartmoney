@@ -12,7 +12,7 @@ using smartmoney.Models;
 namespace smartmoney.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231016214826_M01-AddTables")]
+    [Migration("20231016235318_M01-AddTables")]
     partial class M01AddTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -203,7 +203,7 @@ namespace smartmoney.Migrations
             modelBuilder.Entity("smartmoney.Models.Transacao", b =>
                 {
                     b.HasOne("smartmoney.Models.Carteira", "Carteira")
-                        .WithMany()
+                        .WithMany("Transacoes")
                         .HasForeignKey("CarteiraId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -217,6 +217,11 @@ namespace smartmoney.Migrations
                     b.Navigation("Carteira");
 
                     b.Navigation("Categoria");
+                });
+
+            modelBuilder.Entity("smartmoney.Models.Carteira", b =>
+                {
+                    b.Navigation("Transacoes");
                 });
 
             modelBuilder.Entity("smartmoney.Models.Usuario", b =>
