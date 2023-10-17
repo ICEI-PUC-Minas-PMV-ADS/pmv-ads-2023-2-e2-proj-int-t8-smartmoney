@@ -60,6 +60,10 @@ namespace smartmoney.Controllers
         {
             if (ModelState.IsValid)
             {
+                if(carteira.Saldo is null)
+                {
+                    carteira.Saldo = 0;
+                }
                 _context.Add(carteira);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

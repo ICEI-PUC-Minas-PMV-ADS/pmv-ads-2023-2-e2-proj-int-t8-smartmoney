@@ -11,9 +11,9 @@ namespace smartmoney.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar o título.")]
+        [Display(Name = "Título")]
         public string Titulo { get; set; }
 
-        [DefaultValue(0)]
         public decimal? Saldo { get; set; }
 
         public int UsuarioId { get; set; }
