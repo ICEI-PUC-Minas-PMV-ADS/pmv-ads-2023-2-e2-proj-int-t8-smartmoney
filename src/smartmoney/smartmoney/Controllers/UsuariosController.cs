@@ -35,12 +35,14 @@ namespace smartmoney.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome,Email,Senha")] Usuario usuario)
         {
+            Console.WriteLine(ModelState.IsValid);
             if (ModelState.IsValid)
             {
                 var dados = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == usuario.Email);
-
+                Console.WriteLine("dados");
                 if (dados == null)
                 {
+                    Console.WriteLine("nao nulo");
                     usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
                     _context.Add(usuario);
                     await _context.SaveChangesAsync();
