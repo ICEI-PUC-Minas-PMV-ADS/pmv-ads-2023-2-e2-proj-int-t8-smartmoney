@@ -72,7 +72,7 @@ namespace smartmoney.Controllers
 
             if (dados == null)
             {
-                ViewBag.Message = "Usuário e/ou senha inválidos";
+                ViewBag.Message = "Usuário e/ou senha inválidos.";
                 return View();
             }
 
@@ -102,7 +102,7 @@ namespace smartmoney.Controllers
             }
             else
             {
-                ViewBag.Message = "Usuário e/ou senha inválidos";
+                ViewBag.Message = "Usuário e/ou senha inválidos.";
             }
 
             return View();
