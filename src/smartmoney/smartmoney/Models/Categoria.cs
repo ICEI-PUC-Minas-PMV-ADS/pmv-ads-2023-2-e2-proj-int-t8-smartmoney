@@ -19,7 +19,7 @@ namespace smartmoney.Models
         public int UsuarioId { get; set; }
 
         [ForeignKey("UsuarioId")]
-        public Usuario Usuario { get; set; }
+        public Usuario? Usuario { get; set; }
     }
     public enum TipoCategoria
     {
