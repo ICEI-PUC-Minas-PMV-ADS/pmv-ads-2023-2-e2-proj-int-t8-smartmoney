@@ -1,13 +1,11 @@
 ﻿@model smartmoney.Models.Transacao
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes";
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>Transacao</h4>
+<div class="my-5">
+    <h1>Detalhes da Transação</h1>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -47,8 +45,9 @@
             @Html.DisplayFor(model => model.Categoria.Titulo)
         </dd>
     </dl>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+        <a asp-action="Index">Voltar</a>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
