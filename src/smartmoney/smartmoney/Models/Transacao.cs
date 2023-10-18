@@ -16,20 +16,23 @@ namespace smartmoney.Models
         public DateTime Data { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar a descrição.")]
+        [Display(Name = "Descrição")]
         public string Descricao { get; set; }
 
-        [Display(Name = "Tipo de Transacao")]
+        [Display(Name = "Tipo de Transação")]
         public TipoTransacao Tipo { get; set; }
-        
+
+        [Display(Name = "Carteira")]
         public int CarteiraId { get; set; }
 
         [ForeignKey("CarteiraId")]
-        public Carteira Carteira { get; set; }
+        public Carteira? Carteira { get; set; }
 
+        [Display(Name = "Categoria")]
         public int? CategoriaId { get; set; }
 
         [ForeignKey("CategoriaId")]
-        public Categoria Categoria { get; set; }
+        public Categoria? Categoria { get; set; }
     }
 
     public enum TipoTransacao
