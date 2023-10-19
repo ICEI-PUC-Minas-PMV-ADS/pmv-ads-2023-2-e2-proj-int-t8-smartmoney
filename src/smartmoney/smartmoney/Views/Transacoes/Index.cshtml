@@ -9,59 +9,73 @@
     <a class="btn btn-primary fw-bold" asp-action="Create" class="btn btn-primary fw-bold">+ NOVA TRANSAÇÃO</a>
 </div>
 
-<div class="card mt-4 mb-5">
-    <table class="table table-striped rounded-1 overflow-hidden ">
-        <thead>
-            <tr class="bg-primary">
-                <th>
-                    @Html.DisplayNameFor(model => model.Valor)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Data)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Descricao)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Tipo)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Carteira)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Categoria)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-    @foreach (var item in Model) {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Valor)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Data)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Descricao)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Tipo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Carteira.Titulo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Categoria.Titulo)
-                </td>
-                <td class="d-flex gap-3">
-                    <a asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-fill"></i></a> 
-                    <a asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-file-earmark-text-fill"></i></a> 
-                    <a asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-trash-fill"></i></a>
-                </td>
-            </tr>
-    }
-        </tbody>
-    </table>
+<div class="mt-4 mb-5 row">
+    <div class="col">
+        <div class="card table-responsive">
+            <table class="table rounded-1 overflow-hidden">
+                <thead>
+                    <tr class="bg-primary">
+                        <th>
+                            @Html.DisplayNameFor(model => model.Valor)
+                        </th>
+                        <th class="d-none d-sm-none d-md-block">
+                            @Html.DisplayNameFor(model => model.Data)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Tipo)
+                        </th>
+                        <th class="d-none d-sm-none d-md-block">
+                            @Html.DisplayNameFor(model => model.Carteira)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Categoria)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+            @foreach (var item in Model) {
+                    <tr>
+                        <td>
+                            R$ @Html.DisplayFor(modelItem => item.Valor)
+                        </td>
+                        <td class="d-none d-sm-none d-md-block">
+                            @Html.DisplayFor(modelItem => item.Data)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tipo)
+                        </td>
+                        <td class="d-none d-sm-none d-md-block">
+                            @Html.DisplayFor(modelItem => item.Carteira.Titulo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Categoria.Titulo)
+                        </td>
+                        <td class="d-flex gap-3">
+                            <a asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-fill"></i></a> 
+                            <a asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-file-earmark-text-fill"></i></a> 
+                            <a asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-trash-fill"></i></a>
+                        </td>
+                    </tr>
+            }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-3 d-none d-sm-none d-md-none d-lg-block">
+        <div class="d-flex flex-column gap-3">
+            <div class="card">
+                <div class="card-body d-flex gap-2">
+                    <i class="bi bi-arrow-up-circle-fill fs-5 align-items-center text-primary"></i>
+                    <span>Receita total: R$  @ViewBag.receita</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body d-flex gap-2">
+                    <i class="bi bi-arrow-down-circle-fill fs-5 align-items-center text-danger"></i>
+                    <span>Despesa total: R$  @ViewBag.despesa</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

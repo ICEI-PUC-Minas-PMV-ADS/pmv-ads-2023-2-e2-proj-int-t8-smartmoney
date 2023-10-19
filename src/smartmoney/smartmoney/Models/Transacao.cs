@@ -19,7 +19,6 @@ namespace smartmoney.Models
         [Display(Name = "Descrição")]
         public string Descricao { get; set; }
 
-        [Display(Name = "Tipo de Transação")]
         public TipoTransacao Tipo { get; set; }
 
         [Display(Name = "Carteira")]

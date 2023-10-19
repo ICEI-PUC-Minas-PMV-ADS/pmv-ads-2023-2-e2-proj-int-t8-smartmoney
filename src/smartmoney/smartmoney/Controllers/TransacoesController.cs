@@ -22,7 +22,11 @@ namespace smartmoney.Controllers
         public async Task<IActionResult> Index()
         {
             var appDbContext = _context.Transacoes.Include(t => t.Carteira).Include(t => t.Categoria);
-            return View(await appDbContext.ToListAsync());
+            var transacoes = await appDbContext.ToListAsync();
+            ViewBag.receita = await GetValores(TipoTransacao.Receita);
+            ViewBag.despesa = await GetValores(TipoTransacao.Despesa);
+
+            return View(transacoes);
         }
 
         // GET: Transacoes/Details/5
@@ -64,6 +68,21 @@ namespace smartmoney.Controllers
             {
                 _context.Add(transacao);
                 await _context.SaveChangesAsync();
+
+                var carteira = await _context.Carteiras.FindAsync(transacao.CarteiraId);
+                if (carteira is not null)
+                {
+                    if (transacao.Tipo == TipoTransacao.Receita)
+                    {
+                        carteira.Saldo += transacao.Valor;
+                    }
+                    else
+                    {
+                        carteira.Saldo -= transacao.Valor;
+                    }
+                    _context.Update(carteira);
+                    await _context.SaveChangesAsync();
+                }
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CarteiraId"] = new SelectList(_context.Carteiras, "Id", "Titulo", transacao.CarteiraId);
@@ -160,14 +179,20 @@ namespace smartmoney.Controllers
             {
                 _context.Transacoes.Remove(transacao);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool TransacaoExists(int id)
         {
-          return (_context.Transacoes?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Transacoes?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+
+        private async Task<decimal> GetValores(TipoTransacao tipo)  {
+            return _context.Transacoes
+                .Where(transacao => transacao.Tipo == tipo)
+                .Sum(transacao => transacao.Valor);
         }
     }
 }
