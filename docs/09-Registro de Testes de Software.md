@@ -1,8 +1,24 @@
 # Registro de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>, <a href="8-Plano de Testes de Software.md"> Plano de Testes de Software</a>
+Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado em um plano de testes pré-definido.
 
-Para cada caso de teste definido no Plano de Testes de Software, realize o registro das evidências dos testes feitos na aplicação pela equipe, que comprovem que o critério de êxito foi alcançado (ou não!!!). Para isso, utilize uma ferramenta de captura de tela que mostre cada um dos casos de teste definidos (obs.: cada caso de teste deverá possuir um vídeo do tipo _screencast_ para caracterizar uma evidência do referido caso).
+## CT-001: Gerenciar a conta do usuário.
+
+Na tela inicial o usúario em sua primeira utilização do sistema SmartMoney deverá realizar o cadastro adicionando nome, email e senha, sendo essa função obrigatória. 
+
+![dados_validos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/9c663d42-fe46-495c-b5ea-1b5c7b385cfd)
+
+ 
+![dados_cadastro_invalido](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/663de889-80a9-41a4-a732-b92da090e8ce)
+
+Ao realizar o cadastro, o usuário poderá efetuar o login na aplicação, com os dados cadastrados.
+
+![login](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/0951b53c-4285-4d7d-abc3-80fee13d37c1)
+
+Caso o usuário, esqueça seus dados cadastrados, será redirecionado a página de recuperação de senha.
+
+![login_invalido](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/45234a21-bd3a-4160-b378-9c00554cd7a8)
+
 
 ## Avaliação
 
