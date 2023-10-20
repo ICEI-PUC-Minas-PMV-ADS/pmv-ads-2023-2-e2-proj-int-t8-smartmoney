@@ -10,6 +10,7 @@ using smartmoney.Models;
 
 namespace smartmoney.Controllers
 {
+    [Authorize]
     public class TransacoesController : Controller
     {
         private readonly AppDbContext _context;

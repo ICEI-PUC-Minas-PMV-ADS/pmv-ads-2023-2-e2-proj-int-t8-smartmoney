@@ -35,14 +35,11 @@ namespace smartmoney.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome,Email,Senha")] Usuario usuario)
         {
-            Console.WriteLine(ModelState.IsValid);
             if (ModelState.IsValid)
             {
                 var dados = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == usuario.Email);
-                Console.WriteLine("dados");
                 if (dados == null)
                 {
-                    Console.WriteLine("nao nulo");
                     usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
                     _context.Add(usuario);
                     await _context.SaveChangesAsync();
@@ -108,6 +105,7 @@ namespace smartmoney.Controllers
             return View();
         }
 
+        [Authorize]
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
@@ -120,6 +118,7 @@ namespace smartmoney.Controllers
         }
 
         // GET: Usuarios/Edit/5
+        // [Authorize]
         //public async Task<IActionResult> Edit(int? id)
         //{
         //    if (id == null || _context.Usuarios == null)
@@ -136,6 +135,7 @@ namespace smartmoney.Controllers
         //}
 
         // POST: Usuarios/Edit/5
+        // [Authorize]
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         //[HttpPost]
