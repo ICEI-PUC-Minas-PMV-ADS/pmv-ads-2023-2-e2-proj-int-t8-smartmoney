@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -124,8 +125,40 @@ namespace smartmoney.Controllers
             {
                 try
                 {
+                    var transacaoAntiga = await _context.Transacoes.AsNoTracking().FirstOrDefaultAsync(t => t.Id == id);
+
                     _context.Update(transacao);
                     await _context.SaveChangesAsync();
+
+                    var carteira = await _context.Carteiras.FindAsync(transacao.CarteiraId);
+                    if (carteira is not null)
+                    {
+                        if (transacaoAntiga.Valor < transacao.Valor)
+                        {
+                            if (transacao.Tipo == TipoTransacao.Receita)
+                            {
+                                carteira.Saldo += (transacao.Valor - transacaoAntiga.Valor);
+                            }
+                            else
+                            {
+                                carteira.Saldo -= (transacao.Valor - transacaoAntiga.Valor);
+                            }
+                        }
+                        else
+                        {
+                            if (transacao.Tipo == TipoTransacao.Receita)
+                            {
+                                carteira.Saldo -= (transacaoAntiga.Valor - transacao.Valor);
+                            }
+                            else
+                            {
+                                carteira.Saldo += (transacaoAntiga.Valor - transacao.Valor);
+                            }
+                                
+                        }
+                        _context.Update(carteira);
+                        await _context.SaveChangesAsync();
+                    }
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -177,6 +210,20 @@ namespace smartmoney.Controllers
             var transacao = await _context.Transacoes.FindAsync(id);
             if (transacao != null)
             {
+                var carteira = await _context.Carteiras.FindAsync(transacao.CarteiraId);
+                if (carteira is not null)
+                {
+                    if (transacao.Tipo == TipoTransacao.Receita)
+                    {
+                        carteira.Saldo -= transacao.Valor;
+                    }
+                    else
+                    {
+                        carteira.Saldo += transacao.Valor;
+                    }
+                    _context.Update(carteira);
+                    await _context.SaveChangesAsync();
+                }
                 _context.Transacoes.Remove(transacao);
             }
 
