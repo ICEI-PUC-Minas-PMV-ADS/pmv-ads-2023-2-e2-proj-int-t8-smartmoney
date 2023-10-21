@@ -16,7 +16,7 @@ A página de cadastro do usuário apresenta a funcionalidade do usuário criar u
 
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário crie sua conta. | Models/Usuario.cs / Controllers/UsuariosController.cs / Views/Usuarios/Create.cshtml | 
+|RF-001| Permitir que o usuário crie sua conta. | Models/Usuario.cs -- Controllers/UsuariosController.cs -- Views/Usuarios/Create.cshtml | 
 
 | ![Página de cadastro do usuário](./img/wireframes/0-cadastro.png "Página de cadastro do usuário") |
 | :---------------------------------------------------------------------------------------: |
@@ -28,7 +28,7 @@ A página de Login apresenta a funcionalidade do usuário acessar sua conta.
 
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário faça Login. | Models/Usuario.cs / Controllers/UsuariosController.cs / Views/Usuarios/Login.cshtml | 
+|RF-001| Permitir que o usuário faça Login. | Models/Usuario.cs -- Controllers/UsuariosController.cs -- Views/Usuarios/Login.cshtml | 
 
 | ![Página de Login](./img/wireframes/1-login.png "Página de Login") |
 | :---------------------------------------------------------------------------------------: |
