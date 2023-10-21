@@ -221,3 +221,31 @@ Nesta seção são apresentados os planos de teste de software.
    <td style="border: 1px solid black; padding: 10px;">O usuário deve ser capaz de visualizar as transações correspondentes aos filtros escolhidos.</td>
   </tr>
 </table>
+
+<table style="border-collapse: collapse;">
+  <tr>
+    <th style="border: 1px solid white; padding: 10px;">Caso de teste</th>
+    <td style="border: 1px solid black; padding: 10px;">CT-008: Gerenciar carteiras.</td>
+  </tr>
+  <tr>
+   <th style="border: 1px solid white; padding: 10px;">Requisitos</th>
+   <td style="border: 1px solid black; padding: 10px;">RF-008: O site deve permitir que os usuários gerenciem sua carteira.</td>
+  </tr>
+  <tr>
+   <th style="border: 1px solid white; padding: 10px;">Objetivo de teste</th>
+   <td style="border: 1px solid black; padding: 10px;">Verificar se o sistema permite que o usuário visualize sua carteira e crie uma nova carteira. .</td>
+  </tr>
+  <tr>
+   <th style="border: 1px solid white; padding: 10px;">Passos</th>
+   <td style="border: 1px solid black; padding: 10px;">
+    1. Acessar o navegador.<br>
+    2. Acessar a página inicial do sistema.<br>
+    3. Acessar a página responsável pela funcionalidade carteira .<br>
+    4. Visualizar carteiras ou criar, editar e deletar sua carteira.
+   </td>
+  </tr>
+  <tr>
+   <th style="border: 1px solid white; padding: 10px;">Critérios de êxito</th>
+   <td style="border: 1px solid black; padding: 10px;">O uauário deve visualizar uma lista com todas as suas carteiras.</td>
+  </tr>
+</table>
