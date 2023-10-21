@@ -18,7 +18,7 @@ A página de cadastro do usuário apresenta a funcionalidade do usuário criar u
 |------|-----------------------------------------|----|
 |RF-001| Permitir que o usuário gerencie sua conta. | Models/Usuario.cs <br>Controllers/UsuariosController.cs <br>Views/Usuarios/Create.cshtml | 
 
-| ![Página de cadastro do usuário](./img/wireframes/0-cadastro.png "Página de cadastro do usuário") |
+| ![Página de cadastro do usuário](./img/telas/tela-cadastro.png "Página de cadastro do usuário") |
 | :---------------------------------------------------------------------------------------: |
 |                                     *Página de cadastro do usuário*                      |
 
@@ -30,7 +30,7 @@ A página de Login apresenta a funcionalidade do usuário acessar sua conta.
 |------|-----------------------------------------|----|
 |RF-001| Permitir que o usuário gerencie sua conta. | Models/Usuario.cs <br>Controllers/UsuariosController.cs <br>Views/Usuarios/Login.cshtml | 
 
-| ![Página de Login](./img/wireframes/1-login.png "Página de Login") |
+| ![Página de Login](./img/telas/tela-login.png "Página de Login") |
 | :---------------------------------------------------------------------------------------: |
 |                                     *Página de Login*                      |
 
