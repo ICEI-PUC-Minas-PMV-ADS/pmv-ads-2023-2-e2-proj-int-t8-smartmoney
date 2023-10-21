@@ -34,6 +34,81 @@ A página de Login apresenta a funcionalidade do usuário acessar sua conta.
 | :---------------------------------------------------------------------------------------: |
 |                                     *Página de Login*                      |
 
+## Páginas de Carteira: Index, Criar, Visualizar, Editar, Deletar (RF-002)
+
+* A página inicial (index) apresenta a lista de carteiras que o usuário possui;
+* A página criar permite que o usuário crie uma carteira;
+* A pagina visualizar permite que o usuário visualize detalhes de uma carteira;
+* A página editar permite que o usuário edite uma carteira;
+* A página deletar permite que o usuário delete uma carrteira.
+
+|ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
+|------|-----------------------------------------|----|
+|RF-002| Permitir que o usuário gerencie sua carteira. |Models/Carteira.cs <br>Controllers/CarteirasController.cs <br>Views/Carteiras/Index.cshtml <br>Views/Carteiras/Create.cshtml <br>Views/Carteiras/Edit.cshtml <br>Views/Carteiras/Details.cshtml <br>Views/Carteiras/Delete.cshtml|
+
+
+<table style="border-collapse: collapse;">
+   <tr>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-carteira.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-carteira-criar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-carteira-detalhes.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-carteira-editar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-carteira-deletar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+</table>
+
+## Páginas de Transação: Index, Criar, Visualizar, Editar, Deletar (RF-003)
+
+* A página inicial (index) apresenta a lista de transações que o usuário possui;
+* A página criar permite que o usuário crie uma transação;
+* A pagina visualizar permite que o usuário visualize detalhes de uma transação;
+* A página editar permite que o usuário edite uma transação;
+* A página deletar permite que o usuário delete uma transação.
+
+|ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
+|------|-----------------------------------------|----|
+|RF-003| Permitir que o usuário gerencie sua carteira. |Models/Transacao.cs <br>Controllers/TransacoesController.cs <br>Views/Transacoes/Index.cshtml <br>Views/Transacoes/Create.cshtml <br>Views/Transacoes/Details.cshtml <br>Views/Transacoes/Edit.cshtml <br>Views/Transacoes/Delete.cshtml  | 
+
+
+<table style="border-collapse: collapse;">
+   <tr>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-transacoes.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-transacoes-criar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-transacoes-detalhes.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-transacoes-editar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-transacoes-deletar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+</table>
+
+## Página Home (Dashboard) (RF-007)
+
+|ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
+|------|-----------------------------------------|----|
+|RF-007| Permitir que o usuário visualize o cálculo das entradas, saídas e o total.| Controllers/HomeController.cs <br>Views/Home/Index.cshtml | 
+
+| ![Página Home](./img/telas/tela-dashboard.png "Página Home") |
+| :---------------------------------------------------------------------------------------: |
+
 <!-- # Instruções de acesso
 
 Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
