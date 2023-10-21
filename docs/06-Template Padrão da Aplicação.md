@@ -4,9 +4,56 @@
 
 Layout padrão da aplicação que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
 
-> **Links Úteis**:
->
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+## Página de Cadastro do Usuário
+| ![Página de cadastro do usuário](./img/telas/tela-cadastro.png "Página de cadastro do usuário") |
+| :---------------------------------------------------------------------------------------: |
+
+## Página de Login
+| ![Página de Login](./img/telas/tela-login.png "Página de Login") |
+| :---------------------------------------------------------------------------------------: |
+
+## Página Home (Dashboard) 
+| ![Página Home](./img/telas/tela-dashboard.png "Página Home") |
+| :---------------------------------------------------------------------------------------: |
+
+## Páginas de Carteira: Index, Criar, Visualizar, Editar, Deletar
+<table style="border-collapse: collapse;">
+   <tr>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-carteira.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-carteira-criar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-carteira-detalhes.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-carteira-editar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-carteira-deletar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+</table>
+
+## Páginas de Transação: Index, Criar, Visualizar, Editar, Deletar 
+<table style="border-collapse: collapse;">
+   <tr>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-transacoes.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-transacoes-criar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-transacoes-detalhes.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-transacoes-editar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-transacoes-deletar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+</table>
