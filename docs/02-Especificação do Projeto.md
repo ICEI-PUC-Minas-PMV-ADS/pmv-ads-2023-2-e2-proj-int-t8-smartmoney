@@ -34,10 +34,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais, 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
 |RF-001| Permitir que o usuário gerencie sua conta. | ALTA |
-|RF-002| Permitir que o usuário gerencie transações de entrada e saída. | ALTA |
-|RF-003| Permitir que o usuário gerencie categorias para transações de entrada e saída. | ALTA |
-|RF-004| Permitir que o usuário defina metas para transações de entrada e saída, respectivamente. | MÉDIA |
-|RF-005| Permitir que o usuário visualize a lista de transações cadastradas. | ALTA |
+|RF-002| Permitir que o usuário gerencie sua carteira. | ALTA |
+|RF-003| Permitir que o usuário gerencie transações de entrada e saída. | ALTA |
+|RF-004| Permitir que o usuário gerencie categorias para transações de entrada e saída. | ALTA |
+|RF-005| Permitir que o usuário defina metas para transações de entrada e saída, respectivamente. | MÉDIA |
 |RF-006| Permitir que o usuário visualize o cálculo das entradas, saídas e o total. | ALTA |
 |RF-007| Permitir que o usuário filtre todas as transações realizadas durante um determinado mês, por categoria. | MÉDIA |
 
