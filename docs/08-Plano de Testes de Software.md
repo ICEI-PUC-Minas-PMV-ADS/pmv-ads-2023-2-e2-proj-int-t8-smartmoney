@@ -222,18 +222,21 @@ Nesta seção são apresentados os planos de teste de software.
   </tr>
 </table>
 
+<br>
+<br>
+
 <table style="border-collapse: collapse;">
   <tr>
     <th style="border: 1px solid white; padding: 10px;">Caso de teste</th>
-    <td style="border: 1px solid black; padding: 10px;">CT-008: Gerenciar carteiras.</td>
+    <td style="border: 1px solid black; padding: 10px;">CT-008: Visualizar carteiras.</td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Requisitos</th>
-   <td style="border: 1px solid black; padding: 10px;">RF-008: O site deve permitir que os usuários gerenciem sua carteira.</td>
+   <td style="border: 1px solid black; padding: 10px;">RF-008: O site deve permitir que os usuários visualizem todas as suas carteiras.</td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Objetivo de teste</th>
-   <td style="border: 1px solid black; padding: 10px;">Verificar se o sistema permite que o usuário visualize sua carteira e crie uma nova carteira. .</td>
+   <td style="border: 1px solid black; padding: 10px;">Verificar se o sistema permite que o usuário visualize suas carteiras.</td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Passos</th>
@@ -241,11 +244,42 @@ Nesta seção são apresentados os planos de teste de software.
     1. Acessar o navegador.<br>
     2. Acessar a página inicial do sistema.<br>
     3. Acessar a página responsável pela funcionalidade carteira .<br>
-    4. Visualizar carteiras ou criar, editar e deletar sua carteira.
+    4. Visualizar carteiras.
    </td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Critérios de êxito</th>
    <td style="border: 1px solid black; padding: 10px;">O uauário deve visualizar uma lista com todas as suas carteiras.</td>
+  </tr>
+</table>
+<br>
+<br>
+
+
+<table style="border-collapse: collapse;">
+  <tr>
+    <th style="border: 1px solid white; padding: 10px;">Caso de teste</th>
+    <td style="border: 1px solid black; padding: 10px;">CT-009: Criar e editar novas carteiras.</td>
+  </tr>
+  <tr>
+   <th style="border: 1px solid white; padding: 10px;">Requisitos</th>
+   <td style="border: 1px solid black; padding: 10px;">RF-009: O site deve permitir que os usuários criem e edite novas carteiras.</td>
+  </tr>
+  <tr>
+   <th style="border: 1px solid white; padding: 10px;">Objetivo de teste</th>
+   <td style="border: 1px solid black; padding: 10px;">Verificar se o sistema permite que o usuário visualize sua carteira e crie ou edite uma nova carteira. .</td>
+  </tr>
+  <tr>
+   <th style="border: 1px solid white; padding: 10px;">Passos</th>
+   <td style="border: 1px solid black; padding: 10px;">
+    1. Acessar o navegador.<br>
+    2. Acessar a página inicial do sistema.<br>
+    3. Acessar a página responsável pela funcionalidade carteira .<br>
+    4. Criar, editar ou deletar sua carteira.
+   </td>
+  </tr>
+  <tr>
+   <th style="border: 1px solid white; padding: 10px;">Critérios de êxito</th>
+   <td style="border: 1px solid black; padding: 10px;">O site deve permitir que o usuário crie, edite ou delete sua carteira.</td>
   </tr>
 </table>
