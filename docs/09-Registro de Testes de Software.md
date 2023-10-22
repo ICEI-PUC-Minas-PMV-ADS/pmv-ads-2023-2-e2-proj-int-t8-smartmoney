@@ -37,6 +37,37 @@ Ao acessar a tela home o usuário poderá visualizar o valor total de entradas, 
 
 ![calculo transaçoes](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/6a51ff2b-50d9-46ae-a08e-67e5de99b45c)
 
+## CT-008 - Visualizar carteiras.
+
+Na tela inicial você deve clicar em Carteiras para visualizar suas carteiras.
+
+![inicial_carteira](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/104533807/5b3ae8cc-6fed-4d83-a2d3-c7afd54b8c6b)
+
+Em carteiras, caso não tenha nenhuma, você deve clicar em Nova Carteira para criar sua carteira.
+
+![carteiras_carteira](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/104533807/345f4d7b-8ba9-4d82-959c-b428181ff0b8)
+
+Criando sua nova carteira, você deve nomear a sua carteira e clicar em Criar.
+
+![nova_carteira](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/104533807/8d7e515b-d8f1-4b6b-998d-44c5db440c08)
+
+Com sua carteira criada, você já consegue visualizar, editar e deletar sua carteira.
+
+![criada_carteira](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/104533807/d17ec5a7-048d-4b26-aa3b-17b3e96ddd64)
+
+Para ver os detalhes da carteira, basta clicar em Visualizar.
+
+![detalhes_carteira](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/104533807/1af2d3e3-8175-4346-818f-3de4775171c1)
+
+Caso queira editar sua carteira, clique no lápis para iniciar a edição.
+
+![editar_carteira](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/104533807/e152a26e-ad5b-4524-9c80-6c8d574d0bf0)
+
+Caso queira deletar sua carteira, clique no Lixo e clique em deletar carteira.
+
+![deletar_carteira](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/104533807/97203ed4-6fb2-45bc-b7ed-5336826f034a)
+
+
 
 
 ## Avaliação
