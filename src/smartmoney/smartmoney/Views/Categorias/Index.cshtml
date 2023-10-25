@@ -1,14 +1,17 @@
 ﻿@model IEnumerable<smartmoney.Models.Categoria>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Categorias";
 }
 
-<h1>Categorias</h1>
 
-<p>
-    <a asp-action="Create" class="btn btn-success">+NOVA CATEGORIA</a>
-</p>
+<div class="container">
+    <div class="d-flex align-items-center gap-4 mt-5">
+        <h1>Categorias</h1>
+        <p>
+        <a asp-action="Create" class="text-white btn btn-primary fw-bold btn-lg">+NOVA CATEGORIA</a>
+        </p>
+    </div>
 <table class="table">
     <thead>
         <tr>
@@ -45,3 +48,4 @@
 }
     </tbody>
 </table>
+</div>
