@@ -1,7 +1,7 @@
 ﻿@model smartmoney.Models.Transacao
 
 @{
-    ViewData["Title"] = "Criar";
+    ViewData["Title"] = "Nova transação";
 }
 
 <div class="container my-5">
@@ -41,13 +41,10 @@
                 </div>
                 <div class="form-group pt-3">
                     <input type="submit" value="Criar" class="text-white fw-bold btn btn-primary" />
+                    <a class="text-primary btn fw-bold" asp-action="Index">Voltar</a>
                 </div>
             </form>
         </div>
-    </div>
-
-    <div class="pt-2">
-        <a asp-action="Index">Voltar</a>
     </div>
 </div>
 

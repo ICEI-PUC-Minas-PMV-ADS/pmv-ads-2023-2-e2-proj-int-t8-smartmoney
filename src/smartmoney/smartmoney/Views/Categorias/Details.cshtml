@@ -1,34 +1,38 @@
 ﻿@model smartmoney.Models.Categoria
 
 @{
-    ViewData["Title"] = "Detalhes da categoria";
+    ViewData["Title"] = "Details";
 }
 
 <div class="container my-5">
     <h1>Detalhes</h1>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Titulo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Titulo)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Tipo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Tipo)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Usuario)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Usuario.Email)
-        </dd>
-    </dl>
-    <div class="py-1">
-        <a class="text-white btn btn-primary fw-bold" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a>
-        <a class="text-primary btn fw-bold" asp-action="Index">Voltar</a>
-    </div>
+
+        <div>
+            <h4>Categoria</h4>
+                <hr />
+                <dl class="row">
+                    <dt class = "col-sm-2">
+                        @Html.DisplayNameFor(model => model.Titulo)
+                    </dt>
+                    <dd class = "col-sm-10">
+                        @Html.DisplayFor(model => model.Titulo)
+                    </dd>
+                    <dt class = "col-sm-2">
+                        @Html.DisplayNameFor(model => model.Tipo)
+                    </dt>
+                    <dd class = "col-sm-10">
+                        @Html.DisplayFor(model => model.Tipo)
+                    </dd>
+                    <dt class = "col-sm-2">
+                        @Html.DisplayNameFor(model => model.Usuario)
+                    </dt>
+                    <dd class = "col-sm-10">
+                        @Html.DisplayFor(model => model.Usuario.Email)
+                    </dd>
+                </dl>
+        </div>
+        <div>
+            <a class="btn btn-primary fw-bold text-white" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a>
+            <a class="text-primary btn fw-bold" asp-action="Index">Voltar</a>
+        </div>
 </div>
