@@ -10,14 +10,14 @@ namespace smartmoney.Models
         [Key]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório informar o tipo.")]
-        [Display(Name = "Tipo de Categoria")]
-        public string Tipo { get; set; }
-
         [Required(ErrorMessage = "Obrigatório informar o título da categoria.")]
         [Display(Name = "Título da Categoria")]
-        public TipoCategoria Titulo { get; set; }
-       
+        public string Titulo { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório informar o tipo.")]
+        [Display(Name = "Tipo de Categoria")]
+        public TipoCategoria Tipo { get; set; }
+
         public int UsuarioId { get; set; }
 
         [ForeignKey("UsuarioId")]

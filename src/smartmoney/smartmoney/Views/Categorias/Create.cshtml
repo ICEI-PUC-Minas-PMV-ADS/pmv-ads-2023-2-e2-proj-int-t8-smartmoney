@@ -6,32 +6,35 @@
 
 <div class="container my-5">
     <h1>Nova Categoria</h1>
-        <hr /s>
+        <hr>
         <div class="row">
             <div class="col-md-4">
                 <form asp-action="Create">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group py-2">
-                        <label asp-for="Tipo" class="control-label"></label>
-                        <input asp-for="Tipo" class="form-control" />
-                        <span asp-validation-for="Tipo" class="text-danger"></span>
-                    </div>
-                    <div class="form-group py-2">
                         <label asp-for="Titulo" class="control-label"></label>
-                        <input asp-for="Titulo" class="form-control"></input>
+                        <input asp-for="Titulo" class="form-control" />
                         <span asp-validation-for="Titulo" class="text-danger"></span>
                     </div>
                     <div class="form-group py-2">
+                        <label asp-for="Tipo" class="control-label"></label>
+                        <select asp-for="Tipo" class="form-control">
+                            <option selected>Receita</option>
+                            <option>Despesa</option>
+                        </select>
+                        <span asp-validation-for="Tipo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group py-2">
                         <label asp-for="UsuarioId" class="control-label"></label>
-                        <input asp-for="UsuarioId" class ="form-control" asp-items="ViewBag.UsuarioId"></input>
+                        <input asp-for="UsuarioId" class ="form-control" asp-items="ViewBag.UsuarioId" />
+                    </div>
+                    <div class="form-group py-3">
+                        <input type="submit" value="Criar" class="text-white btn btn-primary fw-bold btn-lg" />
+                        <a class="text-primary btn fw-bold btn-lg" asp-action="Index">Voltar</a>
                     </div>
                 </form>
         </div>
 </div>
-            <div class="form-group d-flex py-3">
-                <input type="submit" value="Criar" class="text-white btn btn-primary fw-bold btn-lg" />
-                <a class="text-primary btn fw-bold btn-lg" asp-action="Index">Voltar</a>
-            </div>
 </div>
 
 @section Scripts {
