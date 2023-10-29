@@ -21,6 +21,7 @@ namespace smartmoney.Models
         public int UsuarioId { get; set; }
 
         [ForeignKey("UsuarioId")]
+        [Display(Name = "Usuário")]
         public Usuario? Usuario { get; set; }
     }
     public enum TipoCategoria
