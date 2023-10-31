@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -24,32 +23,21 @@ namespace smartmoney.Controllers
         // GET: Carteiras
         public async Task<IActionResult> Index()
         {
-            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
-            var appDbContext = _context.Carteiras
-            .Where(c => c.UsuarioId == int.Parse(authenticatedUserId))
-            .Include(c => c.Usuario);
+            var appDbContext = _context.Carteiras.Include(c => c.Usuario);
             return View(await appDbContext.ToListAsync());
         }
 
         // GET: Carteiras/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            var carteira = await _context.Carteiras
-                .Include(c => c.Usuario)
-                .FirstOrDefaultAsync(m => m.Id == id);
-
-            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (carteira?.UsuarioId != int.Parse(authenticatedUserId))
-            {
-                return Forbid(); // Ou redirecione para uma página de erro, como Forbidden
-            }
-
             if (id == null || _context.Carteiras == null)
             {
                 return NotFound();
             }
 
+            var carteira = await _context.Carteiras
+                .Include(c => c.Usuario)
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (carteira == null)
             {
                 return NotFound();
@@ -74,9 +62,6 @@ namespace smartmoney.Controllers
         {
             if (ModelState.IsValid)
             {
-                string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                carteira.UsuarioId = int.Parse(authenticatedUserId);
-
                 if(carteira.Saldo is null)
                 {
                     carteira.Saldo = 0;
@@ -92,19 +77,12 @@ namespace smartmoney.Controllers
         // GET: Carteiras/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            var carteira = await _context.Carteiras.FindAsync(id);
-
-            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (carteira?.UsuarioId != int.Parse(authenticatedUserId))
-            {
-                return Forbid(); // Ou redirecione para uma página de erro, como Forbidden
-            }
-
             if (id == null || _context.Carteiras == null)
             {
                 return NotFound();
             }
 
+            var carteira = await _context.Carteiras.FindAsync(id);
             if (carteira == null)
             {
                 return NotFound();
@@ -120,12 +98,6 @@ namespace smartmoney.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Titulo,Saldo,UsuarioId")] Carteira carteira)
         {
-            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (carteira?.UsuarioId != int.Parse(authenticatedUserId))
-            {
-                return Forbid(); // Ou redirecione para uma página de erro, como Forbidden
-            }
-
             if (id != carteira.Id)
             {
                 return NotFound();
@@ -158,21 +130,14 @@ namespace smartmoney.Controllers
         // GET: Carteiras/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            var carteira = await _context.Carteiras
-                .Include(c => c.Usuario)
-                .FirstOrDefaultAsync(m => m.Id == id);
-
-            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (carteira?.UsuarioId != int.Parse(authenticatedUserId))
-            {
-                return Forbid(); // Ou redirecione para uma página de erro, como Forbidden
-            }
-
             if (id == null || _context.Carteiras == null)
             {
                 return NotFound();
             }
 
+            var carteira = await _context.Carteiras
+                .Include(c => c.Usuario)
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (carteira == null)
             {
                 return NotFound();
@@ -186,31 +151,23 @@ namespace smartmoney.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var carteira = await _context.Carteiras.FindAsync(id);
-
-            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (carteira?.UsuarioId != int.Parse(authenticatedUserId))
-            {
-                return Forbid(); // Ou redirecione para uma página de erro, como Forbidden
-            }
-
             if (_context.Carteiras == null)
             {
                 return Problem("Entity set 'AppDbContext.Carteiras'  is null.");
             }
-
+            var carteira = await _context.Carteiras.FindAsync(id);
             if (carteira != null)
             {
                 _context.Carteiras.Remove(carteira);
             }
-
+            
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool CarteiraExists(int id)
         {
-            return (_context.Carteiras?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.Carteiras?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
