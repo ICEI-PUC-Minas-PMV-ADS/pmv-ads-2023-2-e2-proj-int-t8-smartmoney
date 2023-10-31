@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -23,10 +24,24 @@ namespace smartmoney.Controllers
         // GET: Transacoes
         public async Task<IActionResult> Index()
         {
-            var appDbContext = _context.Transacoes.Include(t => t.Carteira).Include(t => t.Categoria);
-            var transacoes = await appDbContext.ToListAsync();
-            ViewBag.receita = await GetValores(TipoTransacao.Receita);
-            ViewBag.despesa = await GetValores(TipoTransacao.Despesa);
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var transacoes = _context.Transacoes
+                .Include(t => t.Carteira)
+                .ThenInclude(c => c.Usuario)
+                .Where(t => t.Carteira.UsuarioId == int.Parse(authenticatedUserId))
+                .ToList();
+
+            var despesas = transacoes
+                .Where(t => t.Tipo == TipoTransacao.Despesa)
+                .Sum(t => t.Valor);
+
+            var receitas = transacoes
+                .Where(t => t.Tipo == TipoTransacao.Receita)
+                .Sum(t => t.Valor);
+
+            ViewBag.receita = receitas;
+            ViewBag.despesa = despesas;
 
             return View(transacoes);
         }
@@ -39,10 +54,13 @@ namespace smartmoney.Controllers
                 return NotFound();
             }
 
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
             var transacao = await _context.Transacoes
-                .Include(t => t.Carteira)
-                .Include(t => t.Categoria)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            .Include(t => t.Carteira)
+            .ThenInclude(c => c.Usuario)
+            .FirstOrDefaultAsync(t => t.Id == id && t.Carteira.UsuarioId == int.Parse(authenticatedUserId));
+
             if (transacao == null)
             {
                 return NotFound();
@@ -54,7 +72,10 @@ namespace smartmoney.Controllers
         // GET: Transacoes/Create
         public IActionResult Create()
         {
-            ViewData["CarteiraId"] = new SelectList(_context.Carteiras, "Id", "Titulo");
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var carteirasDoUsuario = _context.Carteiras.Where(carteira => carteira.UsuarioId == int.Parse(authenticatedUserId)).ToList();
+
+            ViewData["CarteiraId"] = new SelectList(carteirasDoUsuario, "Id", "Titulo");
             ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Titulo");
             return View();
         }
@@ -68,10 +89,18 @@ namespace smartmoney.Controllers
         {
             if (ModelState.IsValid)
             {
+                string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+                var carteira = await _context.Carteiras.FirstOrDefaultAsync(c => c.Id == transacao.CarteiraId && c.UsuarioId == int.Parse(authenticatedUserId));
+
+                if (carteira == null)
+                {
+                    return NotFound();
+                }
+
                 _context.Add(transacao);
                 await _context.SaveChangesAsync();
 
-                var carteira = await _context.Carteiras.FindAsync(transacao.CarteiraId);
                 if (carteira is not null)
                 {
                     if (transacao.Tipo == TipoTransacao.Receita)
@@ -100,11 +129,15 @@ namespace smartmoney.Controllers
                 return NotFound();
             }
 
-            var transacao = await _context.Transacoes.FindAsync(id);
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var transacao = await _context.Transacoes.FirstOrDefaultAsync(t => t.Id == id && t.Carteira.UsuarioId == int.Parse(authenticatedUserId));
+
             if (transacao == null)
             {
                 return NotFound();
             }
+
             ViewData["CarteiraId"] = new SelectList(_context.Carteiras, "Id", "Titulo", transacao.CarteiraId);
             ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Titulo", transacao.CategoriaId);
             return View(transacao);
@@ -126,12 +159,20 @@ namespace smartmoney.Controllers
             {
                 try
                 {
+                    string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+                    var carteira = await _context.Carteiras.FindAsync(transacao.CarteiraId);
+
+                    if (carteira?.UsuarioId != int.Parse(authenticatedUserId))
+                    {
+                        return NotFound();
+                    }
+
                     var transacaoAntiga = await _context.Transacoes.AsNoTracking().FirstOrDefaultAsync(t => t.Id == id);
 
                     _context.Update(transacao);
                     await _context.SaveChangesAsync();
 
-                    var carteira = await _context.Carteiras.FindAsync(transacao.CarteiraId);
                     if (carteira is not null)
                     {
                         if (transacaoAntiga.Valor < transacao.Valor)
@@ -187,10 +228,13 @@ namespace smartmoney.Controllers
                 return NotFound();
             }
 
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
             var transacao = await _context.Transacoes
-                .Include(t => t.Carteira)
-                .Include(t => t.Categoria)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            .Include(t => t.Carteira)
+            .ThenInclude(c => c.Usuario)
+            .FirstOrDefaultAsync(t => t.Id == id && t.Carteira.UsuarioId == int.Parse(authenticatedUserId));
+
             if (transacao == null)
             {
                 return NotFound();
@@ -208,7 +252,14 @@ namespace smartmoney.Controllers
             {
                 return Problem("Entity set 'AppDbContext.Transacoes'  is null.");
             }
-            var transacao = await _context.Transacoes.FindAsync(id);
+
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var transacao = await _context.Transacoes
+            .Include(t => t.Carteira)
+            .ThenInclude(c => c.Usuario)
+            .FirstOrDefaultAsync(t => t.Id == id && t.Carteira.UsuarioId == int.Parse(authenticatedUserId));
+
             if (transacao != null)
             {
                 var carteira = await _context.Carteiras.FindAsync(transacao.CarteiraId);
@@ -226,6 +277,9 @@ namespace smartmoney.Controllers
                     await _context.SaveChangesAsync();
                 }
                 _context.Transacoes.Remove(transacao);
+            } else
+            {
+                return NotFound();
             }
 
             await _context.SaveChangesAsync();
@@ -235,12 +289,6 @@ namespace smartmoney.Controllers
         private bool TransacaoExists(int id)
         {
             return (_context.Transacoes?.Any(e => e.Id == id)).GetValueOrDefault();
-        }
-
-        private async Task<decimal> GetValores(TipoTransacao tipo)  {
-            return _context.Transacoes
-                .Where(transacao => transacao.Tipo == tipo)
-                .Sum(transacao => transacao.Valor);
         }
     }
 }
