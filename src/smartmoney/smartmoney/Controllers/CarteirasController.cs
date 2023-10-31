@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -23,7 +24,12 @@ namespace smartmoney.Controllers
         // GET: Carteiras
         public async Task<IActionResult> Index()
         {
-            var appDbContext = _context.Carteiras.Include(c => c.Usuario);
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var appDbContext = _context.Carteiras
+            .Where(c => c.UsuarioId == int.Parse(authenticatedUserId))
+            .Include(c => c.Usuario);
+
             return View(await appDbContext.ToListAsync());
         }
 
@@ -35,9 +41,12 @@ namespace smartmoney.Controllers
                 return NotFound();
             }
 
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
             var carteira = await _context.Carteiras
-                .Include(c => c.Usuario)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .Where(c => c.Id == id && c.UsuarioId == int.Parse(authenticatedUserId))
+                .FirstOrDefaultAsync();
+
             if (carteira == null)
             {
                 return NotFound();
@@ -62,7 +71,10 @@ namespace smartmoney.Controllers
         {
             if (ModelState.IsValid)
             {
-                if(carteira.Saldo is null)
+                string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                carteira.UsuarioId = int.Parse(authenticatedUserId);
+
+                if (carteira.Saldo is null)
                 {
                     carteira.Saldo = 0;
                 }
@@ -82,7 +94,12 @@ namespace smartmoney.Controllers
                 return NotFound();
             }
 
-            var carteira = await _context.Carteiras.FindAsync(id);
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var carteira = await _context.Carteiras
+                .Where(c => c.Id == id && c.UsuarioId == int.Parse(authenticatedUserId))
+                .FirstOrDefaultAsync();
+
             if (carteira == null)
             {
                 return NotFound();
@@ -98,7 +115,9 @@ namespace smartmoney.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Titulo,Saldo,UsuarioId")] Carteira carteira)
         {
-            if (id != carteira.Id)
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (id != carteira.Id || carteira.UsuarioId != int.Parse(authenticatedUserId))
             {
                 return NotFound();
             }
@@ -135,9 +154,12 @@ namespace smartmoney.Controllers
                 return NotFound();
             }
 
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
             var carteira = await _context.Carteiras
-                .Include(c => c.Usuario)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .Where(c => c.Id == id && c.UsuarioId == int.Parse(authenticatedUserId))
+                .FirstOrDefaultAsync();
+
             if (carteira == null)
             {
                 return NotFound();
@@ -155,10 +177,19 @@ namespace smartmoney.Controllers
             {
                 return Problem("Entity set 'AppDbContext.Carteiras'  is null.");
             }
-            var carteira = await _context.Carteiras.FindAsync(id);
+
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var carteira = await _context.Carteiras
+                .Where(c => c.Id == id && c.UsuarioId == int.Parse(authenticatedUserId))
+                .FirstOrDefaultAsync();
+
             if (carteira != null)
             {
                 _context.Carteiras.Remove(carteira);
+            } else
+            {
+                return NotFound();
             }
             
             await _context.SaveChangesAsync();
