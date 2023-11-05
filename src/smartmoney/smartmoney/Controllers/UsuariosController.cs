@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using smartmoney.Models;
+using smartmoney.Models.ViewModels;
 
 namespace smartmoney.Controllers
 {
@@ -118,58 +119,201 @@ namespace smartmoney.Controllers
         }
 
         // GET: Usuarios/Edit/5
-        // [Authorize]
-        //public async Task<IActionResult> Edit(int? id)
-        //{
-        //    if (id == null || _context.Usuarios == null)
-        //    {
-        //        return NotFound();
-        //    }
+        [Authorize]
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null || _context.Usuarios == null)
+            {
+                return NotFound();
+            }
 
-        //    var usuario = await _context.Usuarios.FindAsync(id);
-        //    if (usuario == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return View(usuario);
-        //}
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.Id == id && u.Id == int.Parse(authenticatedUserId));
+
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            UsuarioEditInfo usuarioInfo = new UsuarioEditInfo
+            {
+                Id = usuario.Id,
+                Nome = usuario.Nome,
+                Email = usuario.Email,
+            };
+
+            return View(usuarioInfo);
+        }
 
         // POST: Usuarios/Edit/5
-        // [Authorize]
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Email,Senha")] Usuario usuario)
-        //{
-        //    if (id != usuario.Id)
-        //    {
-        //        return NotFound();
-        //    }
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Email")] UsuarioEditInfo usuario)
+        {
+            if (id != usuario.Id)
+            {
+                return NotFound();
+            }
 
-        //    if (ModelState.IsValid)
-        //    {
-        //        try
-        //        {
-        //            usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
-        //            _context.Update(usuario);
-        //            await _context.SaveChangesAsync();
-        //        }
-        //        catch (DbUpdateConcurrencyException)
-        //        {
-        //            if (!UsuarioExists(usuario.Id))
-        //            {
-        //                return NotFound();
-        //            }
-        //            else
-        //            {
-        //                throw;
-        //            }
-        //        }
-        //        return RedirectToAction(nameof(Index));
-        //    }
-        //    return View(usuario);
-        //}
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var existingUsuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.Id == id && u.Id == int.Parse(authenticatedUserId));
+
+            if (existingUsuario == null)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    existingUsuario.Nome = usuario.Nome;
+                    existingUsuario.Email = usuario.Email;
+
+                    _context.Entry(existingUsuario).State = EntityState.Modified;
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!UsuarioExists(usuario.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction("Index", "Home");
+            }
+            return View(usuario);
+        }
+
+        // GET: Usuarios/EditPassword/5
+        [Authorize]
+        public async Task<IActionResult> EditPassword(int? id)
+        {
+            if (id == null || _context.Usuarios == null)
+            {
+                return NotFound();
+            }
+
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.Id == id && u.Id == int.Parse(authenticatedUserId));
+
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            return View();
+        }
+
+        // POST: Usuarios/EditPassword/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditPassword(int id, [Bind("Id,Senha,ConfirmarSenha")] UsuarioEditPassword usuario)
+        {
+            if (id != usuario.Id)
+            {
+                return NotFound();
+            }
+
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var existingUsuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.Id == id && u.Id == int.Parse(authenticatedUserId));
+
+            if (existingUsuario == null)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    if (usuario.Senha == usuario.ConfirmarSenha)
+                    {
+                        existingUsuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
+                        _context.Entry(existingUsuario).State = EntityState.Modified;
+                        await _context.SaveChangesAsync();
+                    }
+                    else
+                    {
+                        ViewBag.Message = "As senhas devem ser iguais.";
+                        return View();
+                    }
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!UsuarioExists(usuario.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction("Index", "Home");
+            }
+            return View(usuario);
+        }
+
+        // GET: Usuarios/Delete/5
+        [Authorize]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null || _context.Usuarios == null)
+            {
+                return NotFound();
+            }
+
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.Id == id && u.Id == int.Parse(authenticatedUserId));
+
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            return View(usuario);
+        }
+
+        // POST: Usuarios/Delete/5
+        [Authorize]
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            if (_context.Usuarios == null)
+            {
+                return Problem("Entity set 'AppDbContext.Usuarios'  is null.");
+            }
+
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.Id == id && u.Id == int.Parse(authenticatedUserId));
+
+            if (usuario != null)
+            {
+                _context.Usuarios.Remove(usuario);
+            }
+
+            await _context.SaveChangesAsync();
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Login", "Usuarios");
+        }
 
         private bool UsuarioExists(int id)
         {

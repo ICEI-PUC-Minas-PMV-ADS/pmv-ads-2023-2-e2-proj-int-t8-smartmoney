@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims;
+
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8" />
@@ -39,16 +41,8 @@
                             <a class="nav-link fw-medium disabled" asp-area="" asp-controller="Metas" asp-action="Index">Metas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-medium disabled" asp-area="" asp-controller="" asp-action="Index">Perfil</a>
+                            <a class="nav-link fw-medium" asp-area="" asp-controller="Usuarios" asp-action="Edit" asp-route-id="@User.FindFirst(ClaimTypes.NameIdentifier)?.Value">Perfil</a>
                         </li>
-                    </ul>
-                    <ul class="ps-2 navbar-nav">
-                        @if (User.Identity != null && User.Identity.IsAuthenticated)
-                        {
-                            <li class="nav-item">
-                                <a class="fw-medium" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>
-                            </li>
-                        }
                     </ul>
                 </div>
             </div>
