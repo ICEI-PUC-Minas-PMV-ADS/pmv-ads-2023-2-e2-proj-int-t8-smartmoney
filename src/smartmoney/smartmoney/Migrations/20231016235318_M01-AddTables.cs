@@ -75,7 +75,8 @@ namespace smartmoney.Migrations
                     Titulo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DataInicial = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DataFinal = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Valor = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    ValorMeta = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Valor = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
                     UsuarioId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
