@@ -28,8 +28,10 @@ namespace smartmoney.Controllers
 
             var transacoes = _context.Transacoes
                 .Include(t => t.Carteira)
+                .Include(t => t.Categoria)
                 .ThenInclude(c => c.Usuario)
                 .Where(t => t.Carteira.UsuarioId == int.Parse(authenticatedUserId))
+                .Where(t => t.Categoria.UsuarioId == int.Parse(authenticatedUserId))
                 .ToList();
 
             var despesas = transacoes
