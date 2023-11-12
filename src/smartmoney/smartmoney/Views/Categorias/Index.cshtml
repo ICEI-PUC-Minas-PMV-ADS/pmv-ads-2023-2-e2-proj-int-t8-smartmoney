@@ -6,25 +6,17 @@
 
 
 <div class="container my-5">
-    <div class="d-flex gap-4">
+    <div class="d-flex align-items-center gap-4">
         <h1>Categorias</h1>
-        <p>
-            <a class="btn btn-primary btn-lg text-white fw-bold" asp-action="Create">+NOVA CATEGORIA</a>
-        </p>
+        <a class="btn btn-primary btn-lg text-white fw-bold" asp-action="Create">+NOVA CATEGORIA</a>
     </div>
-        <div class="col">
+    <div class="col mt-4">
             <div class="card table-responsive">
                 <table class="table rounded-1 overflow-hidden">
                     <thead>
                         <tr class="bg-primary text-white">
                             <th>
                                 @Html.DisplayNameFor(model => model.Titulo)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Tipo)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Usuario)
                             </th>
                             <th></th>
                         </tr>
@@ -34,12 +26,6 @@
                         <tr class="text-secondary">
                             <td>
                                 @Html.DisplayFor(modelItem => item.Titulo)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Tipo)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Usuario.Email)
                             </td>
                             <td class="d-flex gap-3">
                              <a asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-fill"></i></a>

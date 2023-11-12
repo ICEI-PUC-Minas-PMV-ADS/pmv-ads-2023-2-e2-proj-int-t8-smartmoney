@@ -56,7 +56,7 @@ namespace smartmoney.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Titulo,Tipo,UsuarioId")] Categoria categoria)
+        public async Task<IActionResult> Create([Bind("Id,Titulo,UsuarioId")] Categoria categoria)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace smartmoney.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Titulo,Tipo,UsuarioId")] Categoria categoria)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Titulo,UsuarioId")] Categoria categoria)
         {
             if (id != categoria.Id)
             {
