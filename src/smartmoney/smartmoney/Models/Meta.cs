@@ -13,9 +13,11 @@ namespace smartmoney.Models
         public string Titulo { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar a data inicial.")]
+        [Display(Name = "Data inicial")]
         public DateTime DataInicial { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar a data final.")]
+        [Display(Name = "Data Final")]
         public DateTime DataFinal { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar o valor da Meta.")]

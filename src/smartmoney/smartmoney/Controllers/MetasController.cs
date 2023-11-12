@@ -22,7 +22,8 @@ namespace smartmoney.Controllers
         public async Task<IActionResult> Index()
         {
             var appDbContext = _context.Metas.Include(m => m.Usuario);
-            return View(await appDbContext.ToListAsync());
+            var metas = await appDbContext.ToListAsync();
+            return View(metas);
         }
 
         // GET: Metas/Details/5
