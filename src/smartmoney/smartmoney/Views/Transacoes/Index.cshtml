@@ -10,6 +10,29 @@
         <a class="text-white btn btn-primary fw-bold btn-lg" asp-action="Create">+ NOVA TRANSAÇÃO</a>
     </div>
 
+    <div class="mt-4">
+        <div class="card">
+            <div class="card-body">
+                <form action="/Transacoes" method="get" class="d-flex align-items-center gap-4">
+                    <input type="date" name="data" class="form-control">
+                    <select name="tipo" class="form-select">
+                        <option selected>Selecione o tipo</option>
+                        <option value="0">Receita</option>
+                        <option value="1">Despesa</option>
+                    </select>
+                    <select name="categoria" class="form-select">
+                        <option selected>Selecione a categoria</option>
+                        @foreach (var categoria in ViewBag.categoria)
+                        {
+                         <option value="@(categoria.Id)">@(categoria.Titulo)</option>
+                        }
+                    </select>
+                    <input class="btn btn-primary text-white fw-bold" type="submit" value="Filtrar">
+                </form>
+            </div>
+        </div>
+    </div>
+
     <div class="mt-4 mb-5 row">
         <div class="col">
             <div class="card table-responsive">
