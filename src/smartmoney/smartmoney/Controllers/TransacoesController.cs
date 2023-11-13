@@ -22,17 +22,39 @@ namespace smartmoney.Controllers
         }
 
         // GET: Transacoes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? data, int? tipo, int? categoria)
         {
             string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             var transacoes = _context.Transacoes
-                .Include(t => t.Carteira)
-                .Include(t => t.Categoria)
-                .ThenInclude(c => c.Usuario)
-                .Where(t => t.Carteira.UsuarioId == int.Parse(authenticatedUserId))
-                .Where(t => t.Categoria.UsuarioId == int.Parse(authenticatedUserId))
-                .ToList();
+            .Include(t => t.Carteira)
+            .Include(t => t.Categoria)
+            .ThenInclude(c => c.Usuario)
+            .Where(t => t.Carteira.UsuarioId == int.Parse(authenticatedUserId))
+            .Where(t => t.Categoria.UsuarioId == int.Parse(authenticatedUserId))
+            .ToList();
+
+            var filtro = transacoes.AsQueryable();
+
+            if (data != null)
+            {
+                filtro = filtro.Where(t => t.Data.Date == DateTime.Parse(data)); ;
+            }
+
+            if (tipo != null)
+            {
+                TipoTransacao filtroTipo = TipoTransacao.Receita;
+                if(tipo == 1)
+                {
+                    filtroTipo = TipoTransacao.Despesa;
+                }
+                filtro = filtro.Where(t => t.Tipo == filtroTipo);
+            }
+
+            if (categoria != null)
+            {
+                filtro = filtro.Where(t => t.CategoriaId == categoria);
+            }
 
             var despesas = transacoes
                 .Where(t => t.Tipo == TipoTransacao.Despesa)
@@ -42,10 +64,16 @@ namespace smartmoney.Controllers
                 .Where(t => t.Tipo == TipoTransacao.Receita)
                 .Sum(t => t.Valor);
 
+            var categorias = _context.Categorias
+                .Where(t => t.UsuarioId == int.Parse(authenticatedUserId))
+                .ToList();
+
+
             ViewBag.receita = receitas;
             ViewBag.despesa = despesas;
+            ViewBag.categoria = categorias;
 
-            return View(transacoes);
+            return View(filtro);
         }
 
         // GET: Transacoes/Details/5
