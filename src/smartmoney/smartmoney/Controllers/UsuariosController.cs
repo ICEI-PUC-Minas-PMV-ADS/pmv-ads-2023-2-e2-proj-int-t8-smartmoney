@@ -42,6 +42,7 @@ namespace smartmoney.Controllers
                     usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
                     _context.Add(usuario);
                     await _context.SaveChangesAsync();
+                    TempData["MensagemSucesso"] = "Conta criada com sucesso. Você já pode fazer login";
                     return RedirectToAction(nameof(Login));
                 }
                 else
@@ -174,6 +175,7 @@ namespace smartmoney.Controllers
                     existingUsuario.Email = usuario.Email;
 
                     _context.Entry(existingUsuario).State = EntityState.Modified;
+                    TempData["MensagemSucesso"] = "Dados alterados com sucesso.";
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -244,6 +246,7 @@ namespace smartmoney.Controllers
                         existingUsuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
                         _context.Entry(existingUsuario).State = EntityState.Modified;
                         await _context.SaveChangesAsync();
+                        TempData["MensagemSucesso"] = "Senha alterada com sucesso.";
                     }
                     else
                     {
@@ -310,6 +313,7 @@ namespace smartmoney.Controllers
 
             await _context.SaveChangesAsync();
             await HttpContext.SignOutAsync();
+            TempData["MensagemSucesso"] = "Conta excluída com sucesso.";
             return RedirectToAction("Login", "Usuarios");
         }
 
@@ -400,6 +404,7 @@ namespace smartmoney.Controllers
                             usuario.Senha = BCrypt.Net.BCrypt.HashPassword(dados.Senha);
                             _context.Entry(usuario).State = EntityState.Modified;
                             await _context.SaveChangesAsync();
+                            TempData["MensagemSucesso"] = "Senha redefinida com sucesso. Agora você já pode fazer login com a nova senha.";
                             return RedirectToAction("Login", "Usuarios");
                         }
                         else

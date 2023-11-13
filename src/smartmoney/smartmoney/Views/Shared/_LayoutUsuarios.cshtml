@@ -17,6 +17,13 @@
             <header class="p-0">
                 <img src="~/img/logo.svg" alt="Logo" />
             </header>
+            @if (TempData["MensagemSucesso"] != null)
+            {
+                <div class="alert alert-success mt-3 alert-dismissible fade show" role="alert">
+                    @TempData["MensagemSucesso"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
         </div>
         <main role="main" class="row bg-white mx-3">
             <div class="col-11 col-md-5 p-0 py-3 py-lg-4 mx-auto">
