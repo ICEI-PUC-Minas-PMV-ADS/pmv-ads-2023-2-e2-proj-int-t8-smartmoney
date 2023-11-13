@@ -30,7 +30,7 @@ namespace smartmoney.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<decimal>("Saldo")
+                    b.Property<decimal?>("Saldo")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Titulo")
@@ -54,9 +54,6 @@ namespace smartmoney.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("Tipo")
-                        .HasColumnType("int");
 
                     b.Property<string>("Titulo")
                         .IsRequired()
@@ -93,7 +90,10 @@ namespace smartmoney.Migrations
                     b.Property<int>("UsuarioId")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("Valor")
+                    b.Property<decimal?>("Valor")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("ValorMeta")
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
@@ -115,7 +115,6 @@ namespace smartmoney.Migrations
                         .HasColumnType("int");
 
                     b.Property<int?>("CategoriaId")
-                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Data")
@@ -158,6 +157,9 @@ namespace smartmoney.Migrations
 
                     b.Property<string>("Senha")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TokenRedefinirSenha")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -208,9 +210,7 @@ namespace smartmoney.Migrations
 
                     b.HasOne("smartmoney.Models.Categoria", "Categoria")
                         .WithMany()
-                        .HasForeignKey("CategoriaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CategoriaId");
 
                     b.Navigation("Carteira");
 

@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using smartmoney.Models;
+using smartmoney.Services;
+using smartmoney.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +23,11 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     options.AccessDeniedPath = "/Usuarios/AccessDenied/";
     options.LoginPath = "/Usuarios/Login/";
 });
+
+var configuration = builder.Configuration;
+
+builder.Services.Configure<BrevoSettings>(builder.Configuration.GetSection(nameof(BrevoSettings)));
+builder.Services.AddSingleton<IEmailService, BrevoService>();
 
 var app = builder.Build();
 

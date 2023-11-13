@@ -1,26 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using BCrypt.Net;
+﻿using System.Security.Claims;
+using System.Text;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using smartmoney.Models;
 using smartmoney.Models.ViewModels;
+using smartmoney.Services;
 
 namespace smartmoney.Controllers
 {
     public class UsuariosController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly IEmailService _emailService;
 
-        public UsuariosController(AppDbContext context)
+        public UsuariosController(AppDbContext context, IEmailService emailService)
         {
             _context = context;
+            _emailService = emailService;
         }
 
         // GET: Usuarios/Create
@@ -313,6 +311,121 @@ namespace smartmoney.Controllers
             await _context.SaveChangesAsync();
             await HttpContext.SignOutAsync();
             return RedirectToAction("Login", "Usuarios");
+        }
+
+        //GET: EsqueciSenha
+        public IActionResult EsqueciSenha()
+        {
+            return View();
+        }
+
+        // POST: EsqueciSenha
+        [HttpPost]
+        public async Task<IActionResult> EsqueciSenha([Bind("Email")] UsuarioEsqueciSenha dados)
+        {
+            if (ModelState.IsValid)
+            {
+                var usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == dados.Email);
+
+                if (usuario != null)
+                {
+                    var guid = Guid.NewGuid();
+                    var token = guid.ToString();
+
+                    usuario.TokenRedefinirSenha = token;
+                    _context.Entry(usuario).State = EntityState.Modified;
+
+                    var urlConfirmacao = Url.Action(nameof(RedefinirSenha), "Usuarios", new { token, user = usuario.Id }, Request.Scheme);
+                    var mensagem = new StringBuilder();
+                    mensagem.Append($"<p>Olá, {usuario.Nome}.</p>");
+                    mensagem.Append("<p>Houve uma solicitação de redefinição de senha para seu usuário em nosso site. Se não foi você que fez a solicitação, ignore essa mensagem. Caso tenha sido você, clique no link abaixo para criar sua nova senha:</p>");
+                    mensagem.Append($"<p><a href='{urlConfirmacao}'>Redefinir Senha</a></p>");
+                    mensagem.Append("<p>Atenciosamente,<br>Equipe de Suporte</p>");
+                    await _emailService.SendEmailAsync(usuario.Email,
+                        "Redefinição de Senha", "", mensagem.ToString());
+
+                    await _context.SaveChangesAsync();
+
+                    return View(nameof(EmailRedefinicaoEnviado));
+                }
+                else
+                {
+                    ViewBag.Message = $"Usuário/e-mail <b>{dados.Email}</b> não encontrado.";
+                    return View();
+                }
+            }
+            else
+            {
+                return View(dados);
+            }
+        }
+
+        public IActionResult EmailRedefinicaoEnviado()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> RedefinirSenha(string token, string user)
+        {
+            var usuario = await _context.Usuarios.FindAsync(int.Parse(user));
+
+            if (usuario != null && usuario.TokenRedefinirSenha == token)
+            {
+                var modelo = new UsuarioRedefinirSenha();
+                modelo.Token = token;
+                modelo.Id = int.Parse(user);
+
+                return View(modelo);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RedefinirSenha([Bind("Id,Token,Senha,ConfirmarSenha")] UsuarioRedefinirSenha dados)
+        {
+            var usuario = await _context.Usuarios.FindAsync(dados.Id);
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    if (usuario != null && dados.Token == usuario.TokenRedefinirSenha)
+                    {
+                        if (dados.Senha == dados.ConfirmarSenha)
+                        {
+                            usuario.Senha = BCrypt.Net.BCrypt.HashPassword(dados.Senha);
+                            _context.Entry(usuario).State = EntityState.Modified;
+                            await _context.SaveChangesAsync();
+                            return RedirectToAction("Login", "Usuarios");
+                        }
+                        else
+                        {
+                            ViewBag.Message = "As senhas devem ser iguais.";
+                            return View(dados);
+                        }
+                    }
+                    else
+                    {
+                        return NotFound();
+                    }
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!UsuarioExists(usuario.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+            }
+            return View(dados);
         }
 
         private bool UsuarioExists(int id)

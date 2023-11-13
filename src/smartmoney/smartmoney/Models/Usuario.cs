@@ -20,10 +20,10 @@ namespace smartmoney.Models
         [DataType(DataType.Password)]
         public string Senha { get; set; }
 
+        public string? TokenRedefinirSenha { get; set; }
+
         public ICollection<Carteira>? Carteiras { get; set; }
         public ICollection<Categoria>? Categorias { get; set; }
         public ICollection<Meta>? Metas { get; set; }
-
-
     }
 }
