@@ -134,8 +134,9 @@ namespace smartmoney.Controllers
                 string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
                 var carteira = await _context.Carteiras.FirstOrDefaultAsync(c => c.Id == transacao.CarteiraId && c.UsuarioId == int.Parse(authenticatedUserId));
+                var categoria = await _context.Categorias.FirstOrDefaultAsync(c => c.Id == transacao.CategoriaId && c.UsuarioId == int.Parse(authenticatedUserId));
 
-                if (carteira == null)
+                if (carteira == null || categoria == null)
                 {
                     return NotFound();
                 }
