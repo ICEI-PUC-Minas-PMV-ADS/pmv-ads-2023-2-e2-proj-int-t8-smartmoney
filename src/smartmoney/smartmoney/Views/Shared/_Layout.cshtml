@@ -81,9 +81,9 @@
                     <h4>Acesso fácil</h4>
                     <a class="pt-1 nav-link fw-medium" asp-area="" asp-controller="Carteiras" asp-action="Index">Carteiras</a>
                     <a class="pt-1 nav-link fw-medium" asp-area="" asp-controller="Transacoes" asp-action="Index">Transações</a>
-                    <a class="pt-1 nav-link fw-medium disabled" asp-area="" asp-controller="Categorias" asp-action="Index">Categorias</a>
-                    <a class="pt-1 nav-link fw-medium disabled" asp-area="" asp-controller="Metas" asp-action="Index">Metas</a>
-                    <a class="pt-1 nav-link fw-medium disabled" asp-area="" asp-controller="" asp-action="Index">Perfil</a>
+                    <a class="pt-1 nav-link fw-medium" asp-area="" asp-controller="Categorias" asp-action="Index">Categorias</a>
+                    <a class="pt-1 nav-link fw-medium" asp-area="" asp-controller="Metas" asp-action="Index">Metas</a>
+                    <a class="nav-link fw-medium" asp-area="" asp-controller="Usuarios" asp-action="Edit" asp-route-id="@User.FindFirst(ClaimTypes.NameIdentifier)?.Value">Perfil</a>
 
                 </div>
                 <p class="d-none d-sm-none d-md-none d-lg-block">&copy; SmartMoney</p>
