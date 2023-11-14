@@ -104,9 +104,10 @@ namespace smartmoney.Controllers
         {
             string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var carteirasDoUsuario = _context.Carteiras.Where(carteira => carteira.UsuarioId == int.Parse(authenticatedUserId)).ToList();
+            var categoriasDoUsuario = _context.Categorias.Where(categoria => categoria.UsuarioId == int.Parse(authenticatedUserId)).ToList();
 
             ViewData["CarteiraId"] = new SelectList(carteirasDoUsuario, "Id", "Titulo");
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Titulo");
+            ViewData["CategoriaId"] = new SelectList(categoriasDoUsuario, "Id", "Titulo");
 
             if (carteirasDoUsuario.Count() <= 0)
             {
