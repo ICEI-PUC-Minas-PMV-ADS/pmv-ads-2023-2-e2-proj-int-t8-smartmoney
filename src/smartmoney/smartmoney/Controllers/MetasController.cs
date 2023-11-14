@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -21,7 +22,12 @@ namespace smartmoney.Controllers
         // GET: Metas
         public async Task<IActionResult> Index()
         {
-            var appDbContext = _context.Metas.Include(m => m.Usuario);
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var appDbContext = _context.Metas
+            .Where(m => m.UsuarioId == int.Parse(authenticatedUserId))
+            .Include(m => m.Usuario);
+
             var metas = await appDbContext.ToListAsync();
             return View(metas);
         }
@@ -34,9 +40,12 @@ namespace smartmoney.Controllers
                 return NotFound();
             }
 
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
             var meta = await _context.Metas
-                .Include(m => m.Usuario)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .Where(m => m.Id == id && m.UsuarioId == int.Parse(authenticatedUserId))
+                .FirstOrDefaultAsync();
+
             if (meta == null)
             {
                 return NotFound();
@@ -61,6 +70,9 @@ namespace smartmoney.Controllers
         {
             if (ModelState.IsValid)
             {
+                string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                meta.UsuarioId = int.Parse(authenticatedUserId);
+
                 _context.Add(meta);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -77,7 +89,12 @@ namespace smartmoney.Controllers
                 return NotFound();
             }
 
-            var meta = await _context.Metas.FindAsync(id);
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var meta = await _context.Metas
+                .Where(m => m.Id == id && m.UsuarioId == int.Parse(authenticatedUserId))
+                .FirstOrDefaultAsync();
+
             if (meta == null)
             {
                 return NotFound();
@@ -93,7 +110,9 @@ namespace smartmoney.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Titulo,DataInicial,DataFinal,ValorMeta,Valor,UsuarioId")] Meta meta)
         {
-            if (id != meta.Id)
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (id != meta.Id || meta.UsuarioId != int.Parse(authenticatedUserId))
             {
                 return NotFound();
             }
@@ -130,9 +149,12 @@ namespace smartmoney.Controllers
                 return NotFound();
             }
 
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
             var meta = await _context.Metas
-                .Include(m => m.Usuario)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .Where(m => m.Id == id && m.UsuarioId == int.Parse(authenticatedUserId))
+                .FirstOrDefaultAsync();
+
             if (meta == null)
             {
                 return NotFound();
@@ -150,19 +172,29 @@ namespace smartmoney.Controllers
             {
                 return Problem("Entity set 'AppDbContext.Metas'  is null.");
             }
-            var meta = await _context.Metas.FindAsync(id);
+
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var meta = await _context.Metas
+                .Where(m => m.Id == id && m.UsuarioId == int.Parse(authenticatedUserId))
+                .FirstOrDefaultAsync();
+
             if (meta != null)
             {
                 _context.Metas.Remove(meta);
             }
-            
+            else
+            {
+                return NotFound();
+            }
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool MetaExists(int id)
         {
-          return (_context.Metas?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Metas?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
