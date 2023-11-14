@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -21,7 +22,12 @@ namespace smartmoney.Controllers
         // GET: Categorias
         public async Task<IActionResult> Index()
         {
-            var appDbContext = _context.Categorias.Include(c => c.Usuario);
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var appDbContext = _context.Categorias
+            .Where(c => c.UsuarioId == int.Parse(authenticatedUserId))
+            .Include(c => c.Usuario);
+
             return View(await appDbContext.ToListAsync());
         }
 
@@ -33,9 +39,12 @@ namespace smartmoney.Controllers
                 return NotFound();
             }
 
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
             var categoria = await _context.Categorias
-                .Include(c => c.Usuario)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .Where(c => c.Id == id && c.UsuarioId == int.Parse(authenticatedUserId))
+                .FirstOrDefaultAsync();
+
             if (categoria == null)
             {
                 return NotFound();
@@ -60,6 +69,9 @@ namespace smartmoney.Controllers
         {
             if (ModelState.IsValid)
             {
+                string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                categoria.UsuarioId = int.Parse(authenticatedUserId);
+
                 _context.Add(categoria);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -76,7 +88,12 @@ namespace smartmoney.Controllers
                 return NotFound();
             }
 
-            var categoria = await _context.Categorias.FindAsync(id);
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var categoria = await _context.Categorias
+                .Where(c => c.Id == id && c.UsuarioId == int.Parse(authenticatedUserId))
+                .FirstOrDefaultAsync();
+
             if (categoria == null)
             {
                 return NotFound();
@@ -92,7 +109,9 @@ namespace smartmoney.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Titulo,UsuarioId")] Categoria categoria)
         {
-            if (id != categoria.Id)
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (id != categoria.Id || categoria.UsuarioId != int.Parse(authenticatedUserId))
             {
                 return NotFound();
             }
@@ -129,9 +148,12 @@ namespace smartmoney.Controllers
                 return NotFound();
             }
 
+            string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
             var categoria = await _context.Categorias
-                .Include(c => c.Usuario)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .Where(c => c.Id == id && c.UsuarioId == int.Parse(authenticatedUserId))
+                .FirstOrDefaultAsync();
+
             if (categoria == null)
             {
                 return NotFound();
@@ -157,12 +179,21 @@ namespace smartmoney.Controllers
 
             try
             {
-                var categoria = await _context.Categorias.FindAsync(id);
+                string authenticatedUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+                var categoria = await _context.Categorias
+                    .Where(c => c.Id == id && c.UsuarioId == int.Parse(authenticatedUserId))
+                    .FirstOrDefaultAsync();
+
                 if (categoria != null)
                 {
                     _context.Categorias.Remove(categoria);
                 }
-            
+                else
+                {
+                    return NotFound();
+                }
+
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -178,7 +209,7 @@ namespace smartmoney.Controllers
 
         private bool CategoriaExists(int id)
         {
-          return (_context.Categorias?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Categorias?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
