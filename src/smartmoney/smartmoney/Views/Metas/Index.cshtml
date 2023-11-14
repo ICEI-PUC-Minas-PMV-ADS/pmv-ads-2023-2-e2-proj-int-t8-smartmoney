@@ -13,14 +13,24 @@
     <div class="d-flex flex-wrap gap-3 mt-4 mb-5">
         @foreach (var item in Model) {
             <div class="card" style="min-width:360px;">
-                <div class="card-body">
-                    <h4 class="fs-3 fw-medium">
-                        @Html.DisplayFor(modelItem => item.Titulo)
-                    </h4>
-                    @Html.DisplayFor(modelItem => item.DataFinal)
-                    @Html.DisplayFor(modelItem => item.ValorMeta)
-                    @Html.DisplayFor(modelItem => item.Valor)
-                    @((item.Valor * 100) / item.ValorMeta)%
+                <div class="card-body gap-2 d-flex flex-column">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x icon-background text-secondary"></i>
+                            <i class="fa fa-check fa-stack-1x fs-4 text-white"></i>
+                        </span>
+                        <h4>
+                            @Html.DisplayFor(modelItem => item.Titulo)
+                        </h4>
+                    </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fs-4 fw-bold">
+                                @((item.Valor * 100) / item.ValorMeta)%
+                            </span>
+                            <span class="text-secondary">
+                                R$ @Html.DisplayFor(modelItem => item.Valor) / R$ @Html.DisplayFor(modelItem => item.ValorMeta)
+                            </span>
+                        </div>
                     <div class="progress" role="progressbar" 
                          aria-label="Basic example"
                          aria-valuenow="@((item.Valor * 100)/item.ValorMeta)"
