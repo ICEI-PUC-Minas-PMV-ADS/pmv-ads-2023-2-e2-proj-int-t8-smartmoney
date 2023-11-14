@@ -112,6 +112,7 @@ namespace smartmoney.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("CarteiraId")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<int?>("CategoriaId")

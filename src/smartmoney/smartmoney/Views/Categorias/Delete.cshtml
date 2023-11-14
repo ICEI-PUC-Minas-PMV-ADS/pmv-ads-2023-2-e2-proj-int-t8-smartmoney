@@ -15,7 +15,15 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Titulo)
         </dd>
-    </dl>
+    </dl>   
+
+    @if (ViewBag.error == 1)
+    {
+        <div class="alert alert-danger" role="alert">
+            Essa categoria não pode ser excluída. Verifique se alguma transação possui essa categoria.
+        </div>
+            
+    }
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />

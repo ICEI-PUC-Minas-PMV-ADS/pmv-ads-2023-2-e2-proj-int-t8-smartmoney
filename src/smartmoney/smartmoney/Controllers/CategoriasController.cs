@@ -122,7 +122,7 @@ namespace smartmoney.Controllers
         }
 
         // GET: Categorias/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int? id, int? error)
         {
             if (id == null || _context.Categorias == null)
             {
@@ -137,6 +137,11 @@ namespace smartmoney.Controllers
                 return NotFound();
             }
 
+            if (error != null)
+            {
+                ViewBag.error = 1;
+            }
+
             return View(categoria);
         }
 
@@ -149,14 +154,26 @@ namespace smartmoney.Controllers
             {
                 return Problem("Entity set 'AppDbContext.Categorias'  is null.");
             }
-            var categoria = await _context.Categorias.FindAsync(id);
-            if (categoria != null)
+
+            try
             {
-                _context.Categorias.Remove(categoria);
-            }
+                var categoria = await _context.Categorias.FindAsync(id);
+                if (categoria != null)
+                {
+                    _context.Categorias.Remove(categoria);
+                }
             
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Delete", new Dictionary<string, object>
+                {
+                    { "id", id },
+                    { "error", 1 }
+                });
+            }
         }
 
         private bool CategoriaExists(int id)
