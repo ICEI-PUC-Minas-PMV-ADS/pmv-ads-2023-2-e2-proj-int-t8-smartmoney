@@ -114,7 +114,7 @@ namespace smartmoney.Controllers
                 ViewBag.errorCarteira = 1;
             }
 
-            if (_context.Categorias.Count() <= 0)
+            if (categoriasDoUsuario.Count() <= 0)
             {
                 ViewBag.errorCategoria = 1;
             }
