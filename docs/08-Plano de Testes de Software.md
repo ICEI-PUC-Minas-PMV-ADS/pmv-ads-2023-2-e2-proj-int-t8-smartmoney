@@ -11,19 +11,27 @@ Nesta seção são apresentados os planos de teste de software.
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Requisitos</th>
-   <td style="border: 1px solid black; padding: 10px;">RF-001: O site deve permitir que os usuários gerenciem sua conta.</td>
+   <td style="border: 1px solid black; padding: 10px;">RF-001: O site deve permitir que o usuário gerencie sua conta.</td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Objetivo de teste</th>
-   <td style="border: 1px solid black; padding: 10px;">Verificar se o sistema permite que o usuário realize o cadastro, faça login, edite seus dados e recupere sua senha.</td>
+   <td style="border: 1px solid black; padding: 10px;">Verificar se o sistema permite que o usuário:</br> 
+    1. Realize o cadastro.</br> 
+    2. Faça login.</br> 
+    3. Faça logout.</br> 
+    4. Edite seus dados.</br> 
+    5. Edite sua senha.</br> 
+    6. Recupere sua senha.</br> 
+    7. Apague sua conta.
+  </td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Passos</th>
    <td style="border: 1px solid black; padding: 10px;">
     1. Acessar o navegador.<br>
     2. Acessar a página inicial do sistema.<br>
-    3. Acessar a página responsável pela funcionalidade desejada para a gestão da conta (login, cadastro, edição ou recuperação de senha).<br>
-    4. Preencher o formulário e realizar o envio.
+    3. Acessar a página responsável pela funcionalidade desejada para a gestão da conta (cadastro, login, edição, logout ou recuperação de senha).<br>
+    4. Realizar o teste da funcionalidade.
    </td>
   </tr>
   <tr>
@@ -38,15 +46,58 @@ Nesta seção são apresentados os planos de teste de software.
 <table style="border-collapse: collapse;">
   <tr>
     <th style="border: 1px solid white; padding: 10px;">Caso de teste</th>
-    <td style="border: 1px solid black; padding: 10px;">CT-002 - Gerenciar transações.</td>
+    <td style="border: 1px solid black; padding: 10px;">CT-002: Visualizar carteiras.</td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Requisitos</th>
-   <td style="border: 1px solid black; padding: 10px;">RF-002 - O site deve permitir que o usuário gerencie suas transações.</td>
+   <td style="border: 1px solid black; padding: 10px;">RF-002: O site deve permitir que o usuário gerencie carteiras.</td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Objetivo de teste</th>
-   <td style="border: 1px solid black; padding: 10px;">Verificar se o sistema permite que o usuário crie, edite e delete transações.</td>
+   <td style="border: 1px solid black; padding: 10px;">Verificar se o sistema permite que o usuário:<br>
+    1. Cadastre uma carteira.<br>
+    2. Visualize uma carteira individualmente.<br>
+    3. Visualize todas as carteiras.<br>
+    2. Edite uma carteira.<br>
+    3. Delete uma carteira.
+   </td>
+  </tr>
+  <tr>
+   <th style="border: 1px solid white; padding: 10px;">Passos</th>
+   <td style="border: 1px solid black; padding: 10px;">
+    1. Acessar o navegador.<br>
+    2. Acessar a página inicial do sistema.<br>
+    3. Acessar a página responsável pela funcionalidade carteira .<br>
+    4. Visualizar carteiras.
+   </td>
+  </tr>
+  <tr>
+   <th style="border: 1px solid white; padding: 10px;">Critérios de êxito</th>
+   <td style="border: 1px solid black; padding: 10px;">O uauário deve visualizar uma lista com todas as suas carteiras.</td>
+  </tr>
+</table>
+
+<br>
+<br>
+
+<table style="border-collapse: collapse;">
+  <tr>
+    <th style="border: 1px solid white; padding: 10px;">Caso de teste</th>
+    <td style="border: 1px solid black; padding: 10px;">CT-003 - Gerenciar transações.</td>
+  </tr>
+  <tr>
+   <th style="border: 1px solid white; padding: 10px;">Requisitos</th>
+   <td style="border: 1px solid black; padding: 10px;">RF-003 - O site deve permitir que o usuário gerencie transações de entrada e saída.</td>
+  </tr>
+  <tr>
+   <th style="border: 1px solid white; padding: 10px;">Objetivo de teste</th>
+   <td style="border: 1px solid black; padding: 10px;">Verificar se o sistema permite que o usuário:<br>
+    1. Cadastre uma transação.<br>
+    2. Visualize uma transação individualmente.<br>
+    3. Visualize todas as transações.<br>
+    2. Edite uma transação.<br>
+    3. Delete uma transação.
+   </td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Passos</th>
@@ -70,15 +121,21 @@ Nesta seção são apresentados os planos de teste de software.
 <table style="border-collapse: collapse;">
   <tr>
     <th style="border: 1px solid white; padding: 10px;">Caso de teste</th>
-    <td style="border: 1px solid black; padding: 10px;">CT-003 - Gerenciar categorias.</td>
+    <td style="border: 1px solid black; padding: 10px;">CT-004 - Gerenciar categorias.</td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Requisitos</th>
-   <td style="border: 1px solid black; padding: 10px;">RF-003 - O site deve permitir que o usuário gerencie categorias.</td>
+   <td style="border: 1px solid black; padding: 10px;">RF-004 - O site deve permitir que o usuário gerencie categorias para transações.</td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Objetivo de teste</th>
-   <td style="border: 1px solid black; padding: 10px;">Verificar se o sistema permite que o usuário crie, edite e delete categorias.</td>
+   <td style="border: 1px solid black; padding: 10px;">Verificar se o sistema permite que o usuário:<br>
+    1. Cadastre uma categoria.<br>
+    2. Visualize uma categoria individualmente.<br>
+    3. Visualize todas as categorias.<br>
+    2. Edite uma categoria.<br>
+    3. Delete uma categoria.
+   </td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Passos</th>
@@ -102,15 +159,21 @@ Nesta seção são apresentados os planos de teste de software.
 <table style="border-collapse: collapse;">
   <tr>
     <th style="border: 1px solid white; padding: 10px;">Caso de teste</th>
-    <td style="border: 1px solid black; padding: 10px;">CT-004 - Gerenciar metas.</td>
+    <td style="border: 1px solid black; padding: 10px;">CT-005 - Gerenciar metas.</td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Requisitos</th>
-   <td style="border: 1px solid black; padding: 10px;">RF-004 - O site deve permitir que o usuário gerencie metas.</td>
+   <td style="border: 1px solid black; padding: 10px;">RF-005 - O site deve permitir que o usuário gerencie metas financeiras pessoais</td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Objetivo de teste</th>
-   <td style="border: 1px solid black; padding: 10px;">Verificar se o sistema permite que o usuário crie, edite e delete metas.</td>
+   <td style="border: 1px solid black; padding: 10px;">Verificar se o sistema permite que o usuário:<br>
+    1. Cadastre uma meta.<br>
+    2. Visualize uma meta individualmente.<br>
+    3. Visualize todas as metas.<br>
+    2. Edite uma meta.<br>
+    3. Delete uma meta.
+   </td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Passos</th>
@@ -134,42 +197,11 @@ Nesta seção são apresentados os planos de teste de software.
 <table style="border-collapse: collapse;">
   <tr>
     <th style="border: 1px solid white; padding: 10px;">Caso de teste</th>
-    <td style="border: 1px solid black; padding: 10px;">CT-005 - Visualizar transações.</td>
+    <td style="border: 1px solid black; padding: 10px;">CT-006 - Visualizar o saldo sobre suas transações.</td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Requisitos</th>
-   <td style="border: 1px solid black; padding: 10px;">RF-005 - O site deve permitir que o usuário visualize suas transações.</td>
-  </tr>
-  <tr>
-   <th style="border: 1px solid white; padding: 10px;">Objetivo de teste</th>
-   <td style="border: 1px solid black; padding: 10px;">Verificar se o sistema permite que o usuário visualize todas as transações criadas em sua conta.</td>
-  </tr>
-  <tr>
-   <th style="border: 1px solid white; padding: 10px;">Passos</th>
-   <td style="border: 1px solid black; padding: 10px;">
-    1. Acessar o navegador.<br>
-    2. Acessar a página inicial do sistema.<br>
-    3. Realizar login na plataforma.<br>
-    4. Acessar a página de transações.
-   </td>
-  </tr>
-  <tr>
-   <th style="border: 1px solid white; padding: 10px;">Critérios de êxito</th>
-   <td style="border: 1px solid black; padding: 10px;">O usuário deve conseguir visualizar uma lista com todas as suas transações.</td>
-  </tr>
-</table>
-
-<br>
-<br>
-
-<table style="border-collapse: collapse;">
-  <tr>
-    <th style="border: 1px solid white; padding: 10px;">Caso de teste</th>
-    <td style="border: 1px solid black; padding: 10px;">CT-006 - Visualizar cálculos sobre suas transações.</td>
-  </tr>
-  <tr>
-   <th style="border: 1px solid white; padding: 10px;">Requisitos</th>
-   <td style="border: 1px solid black; padding: 10px;">RF-006 - O site deve permitir que o usuário visualize o valor total de entradas, saídas e o saldo atual.</td>
+   <td style="border: 1px solid black; padding: 10px;">RF-006 - O site deve permitir que o usuário visualize o saldo de entradas, saídas e o total.</td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Objetivo de teste</th>
@@ -200,7 +232,7 @@ Nesta seção são apresentados os planos de teste de software.
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Requisitos</th>
-   <td style="border: 1px solid black; padding: 10px;">RF-007 - O site deve permitir que o usuário filtre as transações por meses e categorias.</td>
+   <td style="border: 1px solid black; padding: 10px;">RF-007 - O site deve Permitir que o usuário filtre suas transações por data, tipo e categoria.</td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Objetivo de teste</th>
@@ -222,64 +254,3 @@ Nesta seção são apresentados os planos de teste de software.
   </tr>
 </table>
 
-<br>
-<br>
-
-<table style="border-collapse: collapse;">
-  <tr>
-    <th style="border: 1px solid white; padding: 10px;">Caso de teste</th>
-    <td style="border: 1px solid black; padding: 10px;">CT-008: Visualizar carteiras.</td>
-  </tr>
-  <tr>
-   <th style="border: 1px solid white; padding: 10px;">Requisitos</th>
-   <td style="border: 1px solid black; padding: 10px;">RF-008: O site deve permitir que os usuários visualizem todas as suas carteiras.</td>
-  </tr>
-  <tr>
-   <th style="border: 1px solid white; padding: 10px;">Objetivo de teste</th>
-   <td style="border: 1px solid black; padding: 10px;">Verificar se o sistema permite que o usuário visualize suas carteiras.</td>
-  </tr>
-  <tr>
-   <th style="border: 1px solid white; padding: 10px;">Passos</th>
-   <td style="border: 1px solid black; padding: 10px;">
-    1. Acessar o navegador.<br>
-    2. Acessar a página inicial do sistema.<br>
-    3. Acessar a página responsável pela funcionalidade carteira .<br>
-    4. Visualizar carteiras.
-   </td>
-  </tr>
-  <tr>
-   <th style="border: 1px solid white; padding: 10px;">Critérios de êxito</th>
-   <td style="border: 1px solid black; padding: 10px;">O uauário deve visualizar uma lista com todas as suas carteiras.</td>
-  </tr>
-</table>
-<br>
-<br>
-
-
-<table style="border-collapse: collapse;">
-  <tr>
-    <th style="border: 1px solid white; padding: 10px;">Caso de teste</th>
-    <td style="border: 1px solid black; padding: 10px;">CT-009: Criar e editar novas carteiras.</td>
-  </tr>
-  <tr>
-   <th style="border: 1px solid white; padding: 10px;">Requisitos</th>
-   <td style="border: 1px solid black; padding: 10px;">RF-009: O site deve permitir que os usuários criem e edite novas carteiras.</td>
-  </tr>
-  <tr>
-   <th style="border: 1px solid white; padding: 10px;">Objetivo de teste</th>
-   <td style="border: 1px solid black; padding: 10px;">Verificar se o sistema permite que o usuário visualize sua carteira e crie ou edite uma nova carteira. .</td>
-  </tr>
-  <tr>
-   <th style="border: 1px solid white; padding: 10px;">Passos</th>
-   <td style="border: 1px solid black; padding: 10px;">
-    1. Acessar o navegador.<br>
-    2. Acessar a página inicial do sistema.<br>
-    3. Acessar a página responsável pela funcionalidade carteira .<br>
-    4. Criar, editar ou deletar sua carteira.
-   </td>
-  </tr>
-  <tr>
-   <th style="border: 1px solid white; padding: 10px;">Critérios de êxito</th>
-   <td style="border: 1px solid black; padding: 10px;">O site deve permitir que o usuário crie, edite ou delete sua carteira.</td>
-  </tr>
-</table>
