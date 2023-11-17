@@ -20,6 +20,21 @@ Layout padrão da aplicação que será utilizado em todas as páginas com a def
 | ![Página Home](./img/telas/tela-dashboard.png "Página Home") |
 | :---------------------------------------------------------------------------------------: |
 
+## Páginas Perfil do Usuário: Editar dados, Editar senha e Apagar conta
+<table style="border-collapse: collapse;">
+   <tr>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-usuario-editar-dados.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-usuario-editar-senha.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-usuario-deletar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+</table>
+
 ## Páginas de Carteira: Index, Criar, Visualizar, Editar, Deletar
 <table style="border-collapse: collapse;">
    <tr>
@@ -58,18 +73,6 @@ Layout padrão da aplicação que será utilizado em todas as páginas com a def
     </td>
     <td style="border: 1px solid black; padding: 10px;">
       <img src="./img/telas/tela-transacoes-deletar.png" alt="" style="max-width: 100%; height: auto;">
-    </td>
-  </tr>
-</table>
-
-## Páginas Perfil do Usuário: Editar dados e Editar senha 
-<table style="border-collapse: collapse;">
-   <tr>
-    <td style="border: 1px solid black; padding: 10px;">
-      <img src="./img/telas/tela-usuario-editar-dados.png" alt="" style="max-width: 100%; height: auto;">
-    </td>
-    <td style="border: 1px solid black; padding: 10px;">
-      <img src="./img/telas/tela-usuario-editar-senha.png" alt="" style="max-width: 100%; height: auto;">
     </td>
   </tr>
 </table>
