@@ -46,7 +46,7 @@ A página de recuperação de senha apresenta a funcionalidade do usuário recup
 | :---------------------------------------------------------------------------------------: |
 |                                     *Página de Recuperação de Senha*                      |
 
-## Páginas de Perfil do Usuário: Editar dados, Editar senha e Logout (RF-001)
+## Páginas de Perfil do Usuário: Editar dados, Editar senha, Deletar conta e Logout (RF-001)
 
 * A página perfil do usuário apresenta a funcionalidade do usuário editar nome, e-mail e realizar logout;
 * A página perfil do usuário atualizar senha apresenta a funcionalidade do usuário atualizar sua senha;
@@ -54,7 +54,7 @@ A página de recuperação de senha apresenta a funcionalidade do usuário recup
 
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário gerencie sua conta. | Models/Usuario.cs <br>Controllers/UsuariosController.cs <br>Views/Usuarios/Edit.cshtml <br>Views/Usuarios/EditPassword.cshtml| 
+|RF-001| Permitir que o usuário gerencie sua conta. | Models/Usuario.cs <br>Controllers/UsuariosController.cs <br>Views/Usuarios/Edit.cshtml <br>Views/Usuarios/EditPassword.cshtml <br>Views/Usuarios/Delete.cshtml| 
 
 <table style="border-collapse: collapse;">
    <tr>
