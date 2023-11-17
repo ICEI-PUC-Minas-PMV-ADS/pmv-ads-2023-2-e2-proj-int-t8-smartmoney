@@ -34,6 +34,42 @@ A página de Login apresenta a funcionalidade do usuário acessar sua conta.
 | :---------------------------------------------------------------------------------------: |
 |                                     *Página de Login*                      |
 
+## Página de Recuperação de Senha (RF-001)
+
+A página de recuperação de senha apresenta a funcionalidade do usuário recuperar a senha da sua conta.
+
+|ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
+|------|-----------------------------------------|----|
+|RF-001| Permitir que o usuário gerencie sua conta. | Models/Usuario.cs <br>Models/ViewModels/UsuarioEdit.cs <br>Controllers/UsuariosController.cs <br>Views/Usuarios/EsqueciSenha.cshtml <br>Services/BrevoService.cs <br>Services/IEmailService.cs <br>Settings/BrevoSettings.cs <br>appsettings.json <br>Program.cs| 
+
+| ![Página de Recuperação de Senha](./img/telas/tela-usuario-recuperar-senha.png "Página de Recuperação de Senha") |
+| :---------------------------------------------------------------------------------------: |
+|                                     *Página de Recuperação de Senha*                      |
+
+## Páginas de Perfil do Usuário: Editar dados, Editar senha e Logout (RF-001)
+
+* A página perfil do usuário apresenta a funcionalidade do usuário editar nome, e-mail e realizar logout;
+* A página perfil do usuário atualizar senha apresenta a funcionalidade do usuário atualizar sua senha;
+* A página perfil do usuário apagar conta apresenta a funcionalidade do usuário deletar sua conta;
+
+|ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
+|------|-----------------------------------------|----|
+|RF-001| Permitir que o usuário gerencie sua conta. | Models/Usuario.cs <br>Controllers/UsuariosController.cs <br>Views/Usuarios/Edit.cshtml <br>Views/Usuarios/EditPassword.cshtml| 
+
+<table style="border-collapse: collapse;">
+   <tr>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-usuario-editar-dados.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-usuario-editar-senha.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-usuario-deletar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+</table>
+
 ## Páginas de Carteira: Index, Criar, Visualizar, Editar, Deletar (RF-002)
 
 * A página inicial (index) apresenta a lista de carteiras que o usuário possui;
