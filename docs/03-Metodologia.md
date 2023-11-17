@@ -18,7 +18,7 @@ A metodologia contempla as definições de ferramental utilizado pela equipe tan
   <tr>
     <td style="border: 1px solid black; padding: 10px;">Documentos do projeto</td>
     <td style="border: 1px solid black; padding: 10px;">GitHub</td>
-    <td style="border: 1px solid black; padding: 10px;"><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney.git" target="_blank">Clique aqui</a> para acessar a documentação no Drive</td>
+    <td style="border: 1px solid black; padding: 10px;"><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/tree/main/docs" target="_blank">Clique aqui</a> para acessar a documentação no Drive</td>
   </tr>
   <tr>
     <td style="border: 1px solid black; padding: 10px;">Projeto de Interface e  Wireframes</td>
@@ -119,7 +119,7 @@ O quadro Kanban do grupo desenvolvido na ferramenta de gerenciamento de projetos
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código: Visual Studio Code.
+- Editor de código: Visual Studio Community 2022.
 - Ferramentas de comunicação: Microsoft Teams.
 - Ferramentas de desenho de tela (_wireframing_): Figma
 
