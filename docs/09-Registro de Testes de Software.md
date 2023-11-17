@@ -19,25 +19,7 @@ Caso o usuário, esqueça seus dados cadastrados, será redirecionado a página 
 
 ![login_invalido](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/45234a21-bd3a-4160-b378-9c00554cd7a8)
 
-## CT-002 - Gerenciar transações
-
-Ao acessar a funcionalidade transações o usuário poderá gerenciar suas transações.
-
-![transaçoes](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/a4a1c240-d57a-4851-8fe1-38937547da34)
-
-## CT-005 - Visualizar transações
-
-Ao acessar a funcionalidade transações o usuário poderá criar uma nova transação.
-
-![nova transação](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/862bbbae-a7c1-42d6-b6a9-552d37332e6f)
-
-## CT-006 - Visualizar cálculos sobre suas transações.
-
-Ao acessar a tela home o usuário poderá visualizar o valor total de entradas, saídas e o saldo atual.
-
-![calculo transaçoes](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/6a51ff2b-50d9-46ae-a08e-67e5de99b45c)
-
-## CT-008 - Visualizar carteiras.
+## CT-002 - Gerenciar carteiras.
 
 Na tela inicial você deve clicar em Carteiras para visualizar suas carteiras.
 
@@ -67,8 +49,21 @@ Caso queira deletar sua carteira, clique no Lixo e clique em deletar carteira.
 
 ![deletar_carteira](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/104533807/97203ed4-6fb2-45bc-b7ed-5336826f034a)
 
+## CT-003 - Gerenciar transações
 
+Ao acessar a funcionalidade transações o usuário poderá gerenciar suas transações.
 
+![transaçoes](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/a4a1c240-d57a-4851-8fe1-38937547da34)
+
+Ao acessar a funcionalidade transações o usuário poderá criar uma nova transação.
+
+![nova transação](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/862bbbae-a7c1-42d6-b6a9-552d37332e6f)
+
+## CT-006 - Visualizar cálculos sobre suas transações.
+
+Ao acessar a tela home o usuário poderá visualizar o valor total de entradas, saídas e o saldo atual.
+
+![calculo transaçoes](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/6a51ff2b-50d9-46ae-a08e-67e5de99b45c)
 
 ## Avaliação
 

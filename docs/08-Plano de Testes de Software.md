@@ -46,7 +46,7 @@ Nesta seção são apresentados os planos de teste de software.
 <table style="border-collapse: collapse;">
   <tr>
     <th style="border: 1px solid white; padding: 10px;">Caso de teste</th>
-    <td style="border: 1px solid black; padding: 10px;">CT-002: Visualizar carteiras.</td>
+    <td style="border: 1px solid black; padding: 10px;">CT-002: Gerenciar carteiras.</td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Requisitos</th>
