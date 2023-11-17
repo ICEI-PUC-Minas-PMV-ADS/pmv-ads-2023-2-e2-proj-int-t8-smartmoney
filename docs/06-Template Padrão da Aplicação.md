@@ -12,6 +12,10 @@ Layout padrão da aplicação que será utilizado em todas as páginas com a def
 | ![Página de Login](./img/telas/tela-login.png "Página de Login") |
 | :---------------------------------------------------------------------------------------: |
 
+## Página de Recuperação de Senha
+| ![Página de Login](./img/telas/tela-usuario-recuperar-senha.png "Página de Login") |
+| :---------------------------------------------------------------------------------------: |
+
 ## Página Home (Dashboard) 
 | ![Página Home](./img/telas/tela-dashboard.png "Página Home") |
 | :---------------------------------------------------------------------------------------: |
@@ -54,6 +58,18 @@ Layout padrão da aplicação que será utilizado em todas as páginas com a def
     </td>
     <td style="border: 1px solid black; padding: 10px;">
       <img src="./img/telas/tela-transacoes-deletar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+</table>
+
+## Páginas Perfil do Usuário: Editar dados e Editar senha 
+<table style="border-collapse: collapse;">
+   <tr>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-usuario-editar-dados.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-usuario-editar-senha.png" alt="" style="max-width: 100%; height: auto;">
     </td>
   </tr>
 </table>
