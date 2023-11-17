@@ -23,7 +23,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Usuário do sistema  | Registrar minhas despesas e ter uma previsão de quando poderei fazer minhas viagens | Ter um futuro confortável e conquistar liberdade geográfica |
 |Usuário do sistema  | Registrar minhas metas financeiras | Ser independente financeiramente |
 |Usuário do sistema  | Gerenciar minhas principais categorias de gastos | Ter estabilidade financeira |
-|Usuário do sistema  | Acompanhar o fluxo entre receitas e despesas, além de verificar meus gastos em um mês específico | Obter reeducação financeira e conquistar uma casa própria |
+|Usuário do sistema  | Acompanhar o fluxo entre receitas e despesas, além de verificar meus gastos em uma data específica | Obter reeducação financeira e conquistar uma casa própria |
 
 ## Requisitos
 
@@ -34,18 +34,18 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais, 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
 |RF-001| Permitir que o usuário gerencie sua conta. | ALTA |
-|RF-002| Permitir que o usuário gerencie sua carteira. | ALTA |
+|RF-002| Permitir que o usuário gerencie carteiras. | ALTA |
 |RF-003| Permitir que o usuário gerencie transações de entrada e saída. | ALTA |
-|RF-004| Permitir que o usuário gerencie categorias para transações de entrada e saída. | ALTA |
-|RF-005| Permitir que o usuário defina metas para transações de entrada e saída, respectivamente. | MÉDIA |
-|RF-006| Permitir que o usuário visualize o cálculo das entradas, saídas e o total. | ALTA |
-|RF-007| Permitir que o usuário filtre todas as transações realizadas durante um determinado mês, por categoria. | MÉDIA |
+|RF-004| Permitir que o usuário gerencie categorias para transações. | ALTA |
+|RF-005| Permitir que o usuário gerencie metas financeiras pessoais | MÉDIA |
+|RF-006| Permitir que o usuário visualize o saldo de entradas, saídas e o total. | ALTA |
+|RF-007| Permitir que o usuário filtre suas transações por data, tipo e categoria. | MÉDIA |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito | Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O site deve ser publicado em um ambiente acessível publicamente na Internet (Repl.it, GitHub Pages, Heroku, Vercel). | ALTA | 
+|RNF-001| O site deve ser publicado em um ambiente acessível publicamente na Internet (Repl.it, GitHub Pages, Heroku, Vercel ou Microsoft Azure). | ALTA | 
 |RNF-002| O site deve ser compatível e capaz de rodar nos principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge) com alterações mínimas. |  ALTA | 
 |RNF-003| O site deve cumprir com a Lei Geral de Proteção de Dados (LGPD). | ALTA | 
 |RNF-004| O site deve ser responsivo e deve haver otimização de imagens. | ALTA | 
