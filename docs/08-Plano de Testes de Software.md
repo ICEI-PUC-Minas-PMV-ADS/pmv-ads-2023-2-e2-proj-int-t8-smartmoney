@@ -67,13 +67,14 @@ Nesta seção são apresentados os planos de teste de software.
    <td style="border: 1px solid black; padding: 10px;">
     1. Acessar o navegador.<br>
     2. Acessar a página inicial do sistema.<br>
-    3. Acessar a página responsável pela funcionalidade carteira .<br>
-    4. Visualizar carteiras.
+    3. Realizar login na plataforma.<br>
+    4. Acessar a página de carteiras.<br>
+    5. Executar a ação correspondente ao gerenciamento desejado das carteiras.
    </td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Critérios de êxito</th>
-   <td style="border: 1px solid black; padding: 10px;">O uauário deve visualizar uma lista com todas as suas carteiras.</td>
+   <td style="border: 1px solid black; padding: 10px;">Exibir um feedback visual para o usuário, indicando que a operação foi bem-sucedida ou redirecioná-lo para uma página relacionada à ação realizada.</td>
   </tr>
 </table>
 
@@ -197,7 +198,7 @@ Nesta seção são apresentados os planos de teste de software.
 <table style="border-collapse: collapse;">
   <tr>
     <th style="border: 1px solid white; padding: 10px;">Caso de teste</th>
-    <td style="border: 1px solid black; padding: 10px;">CT-006 - Visualizar o saldo sobre suas transações.</td>
+    <td style="border: 1px solid black; padding: 10px;">CT-006 - Visualizar o saldo movimentado nas transações.</td>
   </tr>
   <tr>
    <th style="border: 1px solid white; padding: 10px;">Requisitos</th>
