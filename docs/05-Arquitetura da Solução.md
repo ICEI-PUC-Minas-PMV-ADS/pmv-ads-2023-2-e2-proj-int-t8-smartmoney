@@ -28,17 +28,29 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+Foram utilizadas as seguintes tecnologias para a construção da solução :
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+- HTML, CSS e JavaScript.
+- C#.
+- ASP.NET Core Mvc.
+- SQL Server.
+- Boostrap.
+- Brevo, MailKit e MimeKit para envio de e-mails.
+- IDE Microsoft Visual Studio Community 2022.
+
+<!-- Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas. -->
+
+<!-- Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário. -->
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
+Utilizamos a hospedagem do serviço Microsoft Azure tanto para a aplicação web quanto para o banco de dados.
 
-> **Links Úteis**:
+<!-- Explique como a hospedagem e o lançamento da plataforma foi feita. -->
+
+<!-- > **Links Úteis**:
 >
 > - [Website com GitHub Pages](https://pages.github.com/)
 > - [Programação colaborativa com Repl.it](https://repl.it/)
 > - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html) -->
