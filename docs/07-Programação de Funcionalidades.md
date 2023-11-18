@@ -113,7 +113,7 @@ A página de recuperação de senha apresenta a funcionalidade do usuário recup
 
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
-|RF-003| Permitir que o usuário gerencie sua carteira. |Models/Transacao.cs <br>Controllers/TransacoesController.cs <br>Views/Transacoes/Index.cshtml <br>Views/Transacoes/Create.cshtml <br>Views/Transacoes/Details.cshtml <br>Views/Transacoes/Edit.cshtml <br>Views/Transacoes/Delete.cshtml  | 
+|RF-003| Permitir que o usuário gerencie transações de entrada e saída. |Models/Transacao.cs <br>Controllers/TransacoesController.cs <br>Views/Transacoes/Index.cshtml <br>Views/Transacoes/Create.cshtml <br>Views/Transacoes/Details.cshtml <br>Views/Transacoes/Edit.cshtml <br>Views/Transacoes/Delete.cshtml  | 
 
 
 <table style="border-collapse: collapse;">
@@ -136,13 +136,88 @@ A página de recuperação de senha apresenta a funcionalidade do usuário recup
   </tr>
 </table>
 
-## Página Home (Dashboard) (RF-007)
+## Páginas de Categoria: Index, Criar, Visualizar, Editar, Deletar (RF-004)
+
+* A página inicial (index) apresenta a lista de categorias que o usuário possui;
+* A página criar permite que o usuário crie uma categoria;
+* A pagina visualizar permite que o usuário visualize detalhes de uma categoria;
+* A página editar permite que o usuário edite uma categoria;
+* A página deletar permite que o usuário delete uma categoria.
 
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
-|RF-007| Permitir que o usuário visualize o cálculo das entradas, saídas e o total.| Controllers/HomeController.cs <br>Views/Home/Index.cshtml | 
+|RF-004| Permitir que o usuário gerencie categorias para transações. |Models/Categoria.cs <br>Controllers/CategoriasController.cs <br>Views/Categorias/Index.cshtml <br>Views/Categorias/Create.cshtml <br>Views/Categorias/Details.cshtml <br>Views/Categorias/Edit.cshtml <br>Views/Categorias/Delete.cshtml  | 
+
+
+<table style="border-collapse: collapse;">
+   <tr>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-categorias.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-categorias-criar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-categorias-detalhes.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-categorias-editar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-categorias-detelar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+</table>
+
+## Páginas de Meta: Index, Criar, Visualizar, Editar, Deletar (RF-005)
+
+* A página inicial (index) apresenta a lista de metas que o usuário possui;
+* A página criar permite que o usuário crie uma meta;
+* A pagina visualizar permite que o usuário visualize detalhes de uma meta;
+* A página editar permite que o usuário edite uma meta;
+* A página deletar permite que o usuário delete uma meta.
+
+|ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
+|------|-----------------------------------------|----|
+|RF-005| Permitir que o usuário gerencie metas financeiras pessoais. |Models/Meta.cs <br>Controllers/MetasController.cs <br>Views/Metas/Index.cshtml <br>Views/Metas/Create.cshtml <br>Views/Metas/Details.cshtml <br>Views/Metas/Edit.cshtml <br>Views/Metas/Delete.cshtml  | 
+
+
+<table style="border-collapse: collapse;">
+   <tr>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-metas.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-metas-criar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-metas-detalhes.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-metas-editar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-metas-deletar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+</table>
+
+## Página Home (Dashboard) (RF-006)
+
+|ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
+|------|-----------------------------------------|----|
+|RF-006| Permitir que o usuário visualize o cálculo das entradas, saídas e o total.| Controllers/HomeController.cs <br>Views/Home/Index.cshtml | 
 
 | ![Página Home](./img/telas/tela-dashboard.png "Página Home") |
+| :---------------------------------------------------------------------------------------: |
+
+## Filtro de transações (RF-007)
+
+|ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
+|------|-----------------------------------------|----|
+|RF-007| Permitir que o usuário filtre suas transações por data, tipo e categoria.| Controllers/TransacoesController.cs <br>Views/Transacoes/Index.cshtml | 
+
+| ![Página Home](./img/telas/tela-transacoes.png "") |
 | :---------------------------------------------------------------------------------------: |
 
 # Instruções de acesso
