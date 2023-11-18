@@ -140,17 +140,12 @@ Ao acessar a tela home o usuário poderá visualizar o valor total de entradas, 
 ## CT-007 - Filtrar transações
 
 Caso queira filtrar sua transação basta informar a data, o tipo e a categoria e clicar em filtrar.
-
-![filltrar](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/e10fdf48-fe7a-4943-a42c-28f4156ecc72)
+![filtrar](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/6c31f6fd-a9e3-442a-be6c-fab9fe43645d)
 
 Ao clicar no botão filtrar o usuário visualizará sua transação individualmente.
 
 ![filltrar](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/e10fdf48-fe7a-4943-a42c-28f4156ecc72)
 
-
 ## Avaliação
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
-
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
+Observa-se que as funcionalidades do sistema que foram definidas como alta e média prioridade pela equipe de desenvolvimento já foram estabelecidas e encontram-se em funcionamento.
