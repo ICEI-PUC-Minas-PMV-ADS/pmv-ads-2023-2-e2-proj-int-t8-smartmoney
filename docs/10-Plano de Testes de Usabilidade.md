@@ -11,13 +11,12 @@ Para garantir uma amostra representativa de usuários, os participantes serão s
 
 - Idade: 21 a 45 anos
 - Perfil do Usuário: Pessoas que queiram gerir sua renda, controlar e registrar suas despesas.
-- Quantidade de Participantes: De 4 a 8 pessoas
+- Quantidade de Participantes: De 4 a 8 pessoas.
 
 ### Procedimentos de Teste:
-Os testes serão realizados de forma remota com o uso de observação direta e registro de métricas, incluindo:
+Os testes serão realizados de forma remota, em seu computador e após o teste será necessário reponder um questionário pela plataforma typeform  para coletar dados e feedback dos usários afim de monitorar a interação do usuário com o sistema no teste.
 
-Observação direta: Os participantes executarão tarefas específicas na aplicação enquanto os condutores de teste observam e fazem anotações sobre suas interações.
-Medição de métricas: Coletaremos dados quantitativos, como tempo gasto em tarefas, número de cliques, número de erros e satisfação do usuário com escalas de classificação.
+Após concluir as tarefas, os participantes compartilharão o feedback sobre a usabilidade da SmartMoney, destacando problemas e sugerindo melhorias. Os resultados deste teste serão usados para aprimorar a experiência do usuário na plataforma SmartMoney.
 
 ### Tarefas a serem Executadas:
 Os participantes serão solicitados a realizar as seguintes tarefas, respectivamente:
@@ -36,9 +35,9 @@ Os participantes serão solicitados a realizar as seguintes tarefas, respectivam
 ### Etapas da Sessão de Teste:
 - Boas-vindas e introdução aos participantes.
 - Breve explicação sobre o objetivo do teste e o funcionamento da aplicação.
-- Instruções sobre como realizar as tarefas.
-- Os participantes executarão as tarefas, sendo observados pelos condutores de teste.
-- Coleta de feedback dos participantes após a conclusão das tarefas.
+- Instruções sobre como realizar o teste.
+- Os participantes executarão as tarefas, e após isso responderá um questionário.
+- Coleta de feedback dos participantes após a conclusão das tarefas e dos testes.
 - Encerramento e agradecimentos.
 
 ### Recursos Demandados:
@@ -47,14 +46,10 @@ Os participantes serão solicitados a realizar as seguintes tarefas, respectivam
 - Questionários para coletar feedback dos participantes.
 
 ### Métricas Coletadas:
-- Tempo gasto em cada tarefa.
-- Número de cliques ou ações realizadas.
-- Número de erros cometidos pelos participantes.
 - Escalas de satisfação do usuário (escala de 1 a 5).
 - Comentários qualitativos dos participantes.
-
-### Cronograma:
-Data a ser definida após implementação das funcionalidades da aplicação. 
+- Sugestões de melhorias e comentários gerais.
+- Avaliação de facilidade atraves de alternativas de multiplas escolhas. 
 
 ### Análise de Dados:
 Após a conclusão dos testes, os dados coletados serão analisados para identificar problemas de usabilidade e oportunidades de melhoria no design da aplicação.
