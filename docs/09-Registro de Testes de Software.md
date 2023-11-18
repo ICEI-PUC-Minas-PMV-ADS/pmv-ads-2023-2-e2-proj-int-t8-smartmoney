@@ -27,6 +27,19 @@ Após informar o email, o usuário visualizará a mensagem que o link de redefin
 
 ![redefinir senha](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/f27917d3-1bd3-4cea-9bd8-261305b45ed8)
 
+Na funcionalidade perfil, o usuário poderá visualizar e gerenciar sua conta
+
+![editar perfil](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/479cf0bb-707e-4959-b0fd-7cfdf3b90c27)
+
+Caso queira trocar sua senha, clique em editar senha , digite sua nova senha e clique em atualizar
+
+![senha](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/854ab266-7136-474c-a49f-04ce0bf8b1c7)
+
+Caso  queira deletar sua conta, clique em deletar
+
+![excluir conta](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/b9c313df-c280-4fa7-9cec-74c2cd924430)
+
+
 ## CT-002 - Gerenciar carteiras.
 
 Na tela inicial você deve clicar em Carteiras para visualizar suas carteiras.
