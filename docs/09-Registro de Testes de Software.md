@@ -59,21 +59,15 @@ Caso queira deletar sua carteira, clique no Lixo e clique em deletar carteira.
 
 ## CT-003 - Gerenciar transações
 
-Ao acessar a funcionalidade transações o usuário poderá gerenciar suas transações.
+Ao acessar a funcionalidade transações o usuário poderá visualizar todas as suas transações e gerencia-lás.
 
 ![transações (2)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/e497a3dc-d104-45fd-9253-863066f17787)
 
-
-Ao acessar a funcionalidade transações o usuário poderá criar uma nova transação.
+Ao clicar em nova transação o usuário poderá criar sua nova transação.
 
 ![nova transação](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/c3309dfa-ed5e-409e-9991-00789ea2a577)
 
-Caso queira filtrar sua transação basta informar a data, o tipo e a categoria e clicar em filtrar.
-
-![filtrar](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/3b949a42-3d1a-4923-a60d-0bd9b249fdfa)
-
-
-Caso queira editar sua carteira, clique no lápis para iniciar a edição.
+Caso queira editar sua transação, clique no lápis para iniciar a edição.
 
 ![editar](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/310c4c42-9403-400e-9712-91210e49251f)
 
@@ -81,13 +75,65 @@ Caso queira deletar sua transação, clique no lixo para deletar.
 
 ![deletar ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/c291ea6d-94bd-4ce0-a4d8-9df0b3c68cf8)
 
+## CT-004 - Gerenciar categorias
+
+Ao acessar a funcionalidade categorias o usuário poderá visualizar todas as suas categorias e gerencia-lás.
+
+![categorias](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/91515c99-76db-416f-8d3d-6da33fbde95c)
+
+Ao clicar em nova categoria o usuário poderá criar sua nova categoria.
+
+![nova categoria](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/38600de3-b7d2-4abb-abca-0f981976e762)
+
+Caso queira editar sua categoria, clique no lápis para editar.
+
+![editar](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/cc55800b-fbc4-458a-97f7-f6346e449f12)
+
+Caso queira visualizar os detalhes da sua categoria individualmente, clique no icone de lista.
+
+![lista](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/ea233238-5707-4261-89c0-46ef652452a1)
+
+Caso queira deletar sua categoria, clique no lixo para deletar.
+
+![deletar](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/fa8a6624-2b30-4ad6-a976-d83af0769b0b)
+
+## CT-005 - Gerenciar metas
+
+Ao acessar a funcionalidade metas o usuário poderá visualizar todas as suas metas
+
+![metas](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/c35f8aa7-78b0-4a91-afb2-a12aaba25167)
+
+Ao clicar em nova meta o usuário poderá adicionar sua nova meta.
+
+![nova meta](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/6827a89e-2770-4357-9e37-be6da98da9af)
+
+Caso queira editar sua meta, clique no lápis para editar.
+
+![editar](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/1eb92b0a-99b6-44a2-9560-356dd582dbf9)
+
+ Caso queira visualizar detalhes de sua meta individualmente, clique no icone lista.
+ 
+ ![detalhes](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/1ae9604d-da7a-447e-9692-f96a579c353b)
 
 
-## CT-006 - Visualizar cálculos sobre suas transações.
+
+## CT-006 - Visualizar o saldo movimentado nas transações
 
 Ao acessar a tela home o usuário poderá visualizar o valor total de entradas, saídas e o saldo atual.
 
-![calculo transaçoes](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/6a51ff2b-50d9-46ae-a08e-67e5de99b45c)
+![tea inicial](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/96571db5-51f0-49ed-80bf-1f42ba3809d1)
+
+
+## CT-007 - Filtrar transações
+
+Caso queira filtrar sua transação basta informar a data, o tipo e a categoria e clicar em filtrar.
+
+![filltrar](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/e10fdf48-fe7a-4943-a42c-28f4156ecc72)
+
+Ao clicar no botão filtrar o usuário visualizará sua transação individualmente.
+
+![filltrar](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/e10fdf48-fe7a-4943-a42c-28f4156ecc72)
+
 
 ## Avaliação
 
