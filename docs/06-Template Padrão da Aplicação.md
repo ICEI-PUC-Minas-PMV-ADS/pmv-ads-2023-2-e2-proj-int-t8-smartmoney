@@ -76,3 +76,45 @@ Layout padrão da aplicação que será utilizado em todas as páginas com a def
     </td>
   </tr>
 </table>
+
+## Páginas de Categoria: Index, Criar, Visualizar, Editar, Deletar 
+<table style="border-collapse: collapse;">
+   <tr>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-categorias.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-categorias-criar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-categorias-detalhes.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-categorias-editar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-categorias-deletar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+</table>
+
+## Páginas de Meta: Index, Criar, Visualizar, Editar, Deletar 
+<table style="border-collapse: collapse;">
+   <tr>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-metas.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-metas-criar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-metas-detalhes.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-metas-editar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="border: 1px solid black; padding: 10px;">
+      <img src="./img/telas/tela-metas-deletar.png" alt="" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+</table>
