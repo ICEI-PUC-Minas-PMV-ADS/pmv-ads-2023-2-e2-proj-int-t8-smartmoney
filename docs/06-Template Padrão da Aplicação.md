@@ -93,7 +93,7 @@ Layout padrão da aplicação que será utilizado em todas as páginas com a def
       <img src="./img/telas/tela-categorias-editar.png" alt="" style="max-width: 100%; height: auto;">
     </td>
     <td style="border: 1px solid black; padding: 10px;">
-      <img src="./img/telas/tela-categorias-deletar.png" alt="" style="max-width: 100%; height: auto;">
+      <img src="./img/telas/tela-categorias-detelar.png" alt="" style="max-width: 100%; height: auto;">
     </td>
   </tr>
 </table>
