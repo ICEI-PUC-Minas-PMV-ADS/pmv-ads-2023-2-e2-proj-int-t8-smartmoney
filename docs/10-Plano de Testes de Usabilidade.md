@@ -18,6 +18,19 @@ Os testes serão realizados de forma remota, em seu computador e após o teste s
 
 Após concluir as tarefas, os participantes compartilharão o feedback sobre a usabilidade da SmartMoney, destacando problemas e sugerindo melhorias. Os resultados deste teste serão usados para aprimorar a experiência do usuário na plataforma SmartMoney.
 
+Os participantes compartilham sua opinião geral sobre a usabilidade da plataforma SmartMoney pelo site TypeForm a seguir: 
+https://d50qfyhupy5.typeform.com/to/vOjMtuDk
+
+![tela inicial](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/dec2df6f-8798-4f30-832f-48a5beb2dde2)
+
+Figura 2: Printscreen de uma das avaliações do questionário na plataforma TypeForm.
+
+![7](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney/assets/89883311/d448e1ae-cd9d-4303-b9ef-2905e7ad35d7)
+
+
+Os usuários poderão pontuar numa escala de 1 a 5 em escala seu grau de dificuldade e satisfação a SmartMoney.
+
+
 ### Tarefas a serem Executadas:
 Os participantes serão solicitados a realizar as seguintes tarefas, respectivamente:
 
