@@ -181,8 +181,11 @@ namespace smartmoney.Controllers
                 return NotFound();
             }
 
-            ViewData["CarteiraId"] = new SelectList(_context.Carteiras, "Id", "Titulo", transacao.CarteiraId);
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Titulo", transacao.CategoriaId);
+            var carteirasDoUsuario = _context.Carteiras.Where(carteira => carteira.UsuarioId == int.Parse(authenticatedUserId)).ToList();
+            var categoriasDoUsuario = _context.Categorias.Where(categoria => categoria.UsuarioId == int.Parse(authenticatedUserId)).ToList();
+
+            ViewData["CarteiraId"] = new SelectList(carteirasDoUsuario, "Id", "Titulo", transacao.CarteiraId);
+            ViewData["CategoriaId"] = new SelectList(categoriasDoUsuario, "Id", "Titulo", transacao.CategoriaId);
             return View(transacao);
         }
 
