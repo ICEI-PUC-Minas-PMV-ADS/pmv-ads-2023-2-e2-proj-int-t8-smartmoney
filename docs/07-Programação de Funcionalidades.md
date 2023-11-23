@@ -222,7 +222,7 @@ A página de recuperação de senha apresenta a funcionalidade do usuário recup
 
 # Instruções de acesso
 
-A aplicação, que contém todas as funcionalidades descritas acima, pode ser acessada por meio [deste link](https://smartmoney.azurewebsites.net).
+A aplicação, que contém todas as funcionalidades descritas acima, pode ser acessada por meio [deste link](https://smartmoney-app.azurewebsites.net).
 
 <!-- Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
 
