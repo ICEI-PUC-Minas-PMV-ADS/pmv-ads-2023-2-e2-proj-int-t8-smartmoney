@@ -25,13 +25,14 @@ O projeto consiste em desenvolver um sistema de gestão de renda e despesas, des
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+```bash
+# Clone o projeto
+$ git clone https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney.git
+# Abra a solução do projeto
+$ Por meio de uma IDE, abra a solução do projeto `smartmoney.sln`.
+```
 
-Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
-
-Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
-
-O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
+Você pode acessar a aplicação online através [deste link](https://smartmoney-app.azurewebsites.net).
 
 # Documentação
 
