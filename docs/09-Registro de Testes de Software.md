@@ -149,3 +149,64 @@ Ao clicar no botão filtrar o usuário visualizará sua transação individualme
 ## Avaliação
 
 Observa-se que as funcionalidades do sistema que foram definidas como alta e média prioridade pela equipe de desenvolvimento já foram estabelecidas e encontram-se em funcionamento.
+
+
+
+## Relatório de Testes de Software
+
+1. Introdução:
+O presente relatório documenta os testes de software realizados no sistema SmartMoney. O objetivo principal foi validar as funcionalidades essenciais do sistema, com base nos casos de teste definidos.
+
+2. Caso de Teste CT-001: Gerenciar a conta do usuário:
+
+- Teste de Cadastro:
+
+Verificou-se que o usuário consegue realizar o cadastro corretamente na primeira utilização.
+Confirmou-se a obrigatoriedade do preenchimento dos campos nome, email e senha.
+- Teste de Login:
+
+O login na aplicação foi testado com sucesso usando os dados cadastrados.
+- Teste de Recuperação de Senha:
+
+A recuperação de senha foi testada com êxito, garantindo que o usuário seja redirecionado à página correta ao esquecer seus dados.
+A funcionalidade de enviar o link de redefinição para o email cadastrado também foi validada.
+- Teste de Gerenciamento de Conta:
+
+A funcionalidade de visualizar e gerenciar a conta foi testada, incluindo a capacidade de trocar a senha e excluir a conta.
+3. Caso de Teste CT-002: Gerenciar carteiras:
+
+- Teste de Criação de Carteira:
+Validou-se que o usuário pode criar uma nova carteira, nomeá-la e salvá-la com sucesso.
+- Teste de Visualização, Edição e Exclusão de Carteira:
+Confirmou-se que o usuário pode visualizar, editar e excluir carteiras existentes.
+4. Caso de Teste CT-003: Gerenciar transações:
+
+- Teste de Criação de Transação:
+Verificou-se que o usuário pode criar uma nova transação.
+- Teste de Edição e Exclusão de Transação:
+Confirmou-se que o usuário pode editar e excluir transações existentes.
+5. Caso de Teste CT-004: Gerenciar categorias:
+
+- Teste de Criação de Categoria:
+Validou-se que o usuário pode criar uma nova categoria.
+- Teste de Visualização, Edição e Exclusão de Categoria:
+Confirmou-se que o usuário pode visualizar, editar e excluir categorias existentes.
+6. Caso de Teste CT-005: Gerenciar metas:
+
+- Teste de Criação de Meta:
+Verificou-se que o usuário pode adicionar uma nova meta.
+- Teste de Edição e Visualização de Meta:
+Confirmou-se que o usuário pode editar e visualizar metas existentes.
+7. Caso de Teste CT-006: Visualizar o saldo movimentado nas transações:
+
+- Verificou-se que o usuário pode visualizar corretamente o valor total de entradas, saídas e o saldo atual na tela inicial.
+8. Caso de Teste CT-007: Filtrar transações:
+
+- Teste de Filtragem de Transações:
+Confirmou-se que o usuário pode filtrar transações com sucesso, informando data, tipo e categoria.
+9. Avaliação:
+
+As funcionalidades definidas como alta e média prioridade estão em pleno funcionamento.
+O sistema demonstrou estar em conformidade com os requisitos especificados nos casos de teste.
+A equipe de desenvolvimento deve considerar os testes concluídos e avançar para a próxima fase.
+Este relatório de testes serve como documentação formal do processo de teste de software realizado no sistema SmartMoney. Qualquer anomalia encontrada durante os testes foi devidamente registrada e, quando necessário, reportada à equipe de desenvolvimento para correção.
