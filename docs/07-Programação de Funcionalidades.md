@@ -220,11 +220,11 @@ A página de recuperação de senha apresenta a funcionalidade do usuário recup
 | ![Página Home](./img/telas/tela-transacoes.png "") |
 | :---------------------------------------------------------------------------------------: |
 
-# Instruções de acesso
+<!-- # Instruções de acesso
 
 A aplicação, que contém todas as funcionalidades descritas acima, pode ser acessada por meio [deste link](https://smartmoney-app.azurewebsites.net).
 
-<!-- Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
+Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
 
 Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
 
