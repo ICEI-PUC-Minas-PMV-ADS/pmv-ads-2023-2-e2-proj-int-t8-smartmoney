@@ -32,7 +32,7 @@ $ git clone https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int
 $ Por meio de uma IDE, abra a solução do projeto `smartmoney.sln`.
 ```
 
-Você pode acessar a aplicação online através [deste link](https://smartmoney-app.azurewebsites.net).
+<!-- Você pode acessar a aplicação online através [deste link](https://smartmoney-app.azurewebsites.net). -->
 
 # Documentação
 
