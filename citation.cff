@@ -1,0 +1,27 @@
+message: Please cite this software using these metadata.
+title: Smart Money
+authors:
+  - family-names: da Silva Lobo
+    given-names: Bruno
+  - family-names: Pereira de Oliveira
+    given-names: Grazielly
+  - family-names: Lopes Pimenta
+    given-names: Lorena
+  - family-names: Lousada Batalha dos Santos
+    given-names: Lucas
+  - family-names: Marques Gomes Viana Lima
+    given-names: Lucas
+  - family-names: Beatriz da Silva
+    given-names: Maria
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Jeunon de Alencar
+    given-names: Bernardo
+keywords:
+  - Finanças
+  - Controle financeiro
+  - Renda
+  - Despesas
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t8-smartmoney
+version: 1.0.0
+date-released: 2024-02-21
